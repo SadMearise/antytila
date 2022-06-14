@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+	"title": "Home Page"
+})
+<body>
+	<div class="wrapper">
+		@@include('html/header.html', {})
+		<main class="page">
+			<section class="main-screen">
+				<span class="main-screen__icon"></span>
+				<div class="main-screen__logo-container ibg">
+					<img src="./img/header/logo.png" alt="">
+				</div>
+				<div class="main-screen__mask"></div>
+				<img class="main-screen__bg" src="./img/header/bg.jpg" alt="">
+			</section>
+			<section class="concerts vertical-indent vertical-indent--s container">1</section>
+			<section class="youtube vertical-indent vertical-indent--s container container--wide">2</section>
+			<section class="merch vertical-indent vertical-indent--s container">3</section>
+			<section class="release vertical-indent vertical-indent--s container">4</section>
+			<section class="video vertical-indent vertical-indent--s container">5</section>
+			<section class="photo vertical-indent vertical-indent--s container">6</section>
+			<section class="novelties vertical-indent vertical-indent--s container">7</section>
+			<section class="instagram vertical-indent vertical-indent--s container">8</section>
+			<section class="community vertical-indent vertical-indent--s container">9</section>
+			<section class="image-block container container--wide">10</section>
+			<section class="contacts vertical-indent vertical-indent--s container">11</section>
+		</main>
+		@@include('html/footer.html', {})
+	</div>
+	@@include('_js.html', {})
+</body>
+</html>

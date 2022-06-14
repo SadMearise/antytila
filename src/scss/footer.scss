@@ -1,0 +1,11 @@
+.footer {
+	background-color: $color-black;
+	&__socials {
+		justify-content: center;
+		margin-bottom: rem(24);
+	}
+	&__copy {
+		text-align: center;
+	}
+}
+
