@@ -32,12 +32,12 @@
 
 .socials {
 	display: flex;
-	column-gap: 24px;
+	column-gap: rem(24);
 	&__social {
 		svg {
 			display: block;
-			width: 20px;
-			height: 20px;
+			width: rem(20);
+			height: rem(20);
 		}
 	}
 }
@@ -46,10 +46,11 @@
 	position: relative;
 	&__bg {
 		width: 100%;
-		max-height: 620px;
+		max-height: rem(620);
 		height: 100%;
 		object-fit: cover;
 	}
+	
 	&__logo-container {
 		position: absolute;
 		z-index: 6;
@@ -75,11 +76,11 @@
 	&__icon {
 		position: absolute;
 		z-index: 100;
-		bottom: 43px;
+		bottom: rem(43);
 		left: 50%;
 		transform: translateX(-50%);
-		width: 22px;
-		height: 22px;
+		width: rem(22);
+		height: rem(22);
 		border: 2px solid $color-white;
 		border-radius: 100%;
 		background-color: transparent;
@@ -93,10 +94,10 @@
 			top: 56%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			border-left: 5.5px solid transparent;
-			border-right: 5.5px solid transparent;
-			border-top: 7.57px solid $color-white;
-			border-radius: 3px;
+			border-left: rem(5.5) solid transparent;
+			border-right: rem(5.5) solid transparent;
+			border-top: rem(7.57) solid $color-white;
+			border-radius: rem(3);
 		}
 	}
 }

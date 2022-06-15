@@ -10,7 +10,6 @@
 
 // Шрифт по умолчанию
 $fontFamily:'Open Sans', sans-serif;
-$fontSize: rem(16);
 
 // Переменные
 $maxWidth: 1440;
@@ -105,12 +104,12 @@ body {
 
 .vertical-indent {
 	&--xs {
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
 	}
 	&--s {
-		padding-top: 48px;
-		padding-bottom: 48px;
+		padding-top: rem(48);
+		padding-bottom: rem(48);
 	}
 	&--m {
 		padding-top: 0px;
