@@ -1,24 +1,38 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans:wght@400;600;700&display=swap");
 @font-face {
-  font-family: albertusnova;
+  font-family: AlbertusNova;
   font-display: swap;
-  src: url("../fonts/albertusnova.woff2") format("woff2"), url("../fonts/albertusnova.woff") format("woff");
+  src: url("../fonts/AlbertusNova-Bold.woff2") format("woff2"), url("../fonts/AlbertusNova-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: AlbertusNovaLight;
+  font-display: swap;
+  src: url("../fonts/AlbertusNovaLight.woff2") format("woff2"), url("../fonts/AlbertusNovaLight.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: albertusnovalight;
+  font-family: AlbertusNovaBlack;
   font-display: swap;
-  src: url("../fonts/albertusnovalight.woff2") format("woff2"), url("../fonts/albertusnovalight.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/AlbertusNovaBlack.woff2") format("woff2"), url("../fonts/AlbertusNovaBlack.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: albertusnovathin;
+  font-family: AlbertusNovaThin;
   font-display: swap;
-  src: url("../fonts/albertusnovathin.woff2") format("woff2"), url("../fonts/albertusnovathin.woff") format("woff");
-  font-weight: 200;
+  src: url("../fonts/AlbertusNovaThin.woff2") format("woff2"), url("../fonts/AlbertusNovaThin.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: AlbertusNova;
+  font-display: swap;
+  src: url("../fonts/AlbertusNova.woff2") format("woff2"), url("../fonts/AlbertusNova.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -113,8 +127,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: #666;
-  color: #FFFFFF;
+  background-color: #FAFAFA;
+  color: #2D2D2D;
   font-weight: 400;
 }
 body.lock {
@@ -192,6 +206,38 @@ body.lock {
   display: none;
 }
 
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.625rem 0.5625rem 0.5rem 0.5625rem;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.btn--default {
+  color: #FFFFFF;
+  background-color: #FF1E00;
+  width: 8.625rem;
+}
+.btn--transparent {
+  background-color: transparent;
+  color: #2D2D2D;
+  border: 1px solid #2D2D2D;
+  width: 8.625rem;
+}
+.btn--empty {
+  width: 8.625rem;
+}
+.btn--underline {
+  border-bottom: 1px solid #2D2D2D;
+  border-radius: 0;
+  padding: 0px 0px 0.0625rem 0px;
+}
+
 .text1 {
   font-family: "Albertus Nova";
   font-weight: 400;
@@ -207,11 +253,94 @@ body.lock {
   line-height: 2.0625rem;
   color: #2D2D2D;
 }
-@media (max-width: 23.4375em) {
+@media (max-width: 23.43625em) {
   .text2 {
     font-size: 1.25rem;
     line-height: 1.6875rem;
   }
+}
+
+.text3 {
+  font-family: "Albertus Nova";
+  font-weight: 300;
+  font-size: 1.625rem;
+  line-height: 1.375rem;
+  color: #2D2D2D;
+}
+@media (max-width: 23.43625em) {
+  .text3 {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+  }
+}
+
+.text4 {
+  font-family: "Albertus Nova";
+  font-weight: 300;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #2D2D2D;
+}
+@media (max-width: 23.43625em) {
+  .text4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.text5 {
+  font-family: "Albertus Nova";
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  color: #2D2D2D;
+}
+
+.text6 {
+  font-family: "Albertus Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.625rem;
+  color: #2D2D2D;
+}
+@media (max-width: 23.43625em) {
+  .text6 {
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
+  }
+}
+
+.text7 {
+  font-family: "Albertus Nova";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+}
+
+.text8 {
+  font-family: "Albertus Nova";
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #2D2D2D;
+}
+
+.text9 {
+  font-family: "Albertus Nova";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  color: #FF1E00;
+}
+
+.text10 {
+  font-family: "Albertus Nova";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #2D2D2D;
 }
 
 .socials {
@@ -233,6 +362,22 @@ body.lock {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 1440px) {
+  .main-screen__bg {
+    height: 620px;
+    height: calc(
+					330px + 290 * ((100vw - 768px) / 672)
+			);
+  }
+}
+@media (max-width: 768px) {
+  .main-screen__bg {
+    height: 330px;
+    height: calc(
+					280px + 50 * ((100vw - 375px) / 393)
+			);
+  }
+}
 .main-screen__logo-container {
   position: absolute;
   z-index: 6;
@@ -241,8 +386,40 @@ body.lock {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  max-width: calc(232px + 437 * ((100vw - 375px) / 1120));
-  max-height: calc(148px + 279 * ((100vw - 375px) / 1120));
+  max-width: 41.8125rem;
+  max-height: 26.6875rem;
+}
+@media (max-width: 1440px) {
+  .main-screen__logo-container {
+    width: 669px;
+    width: calc(
+					344px + 325 * ((100vw - 768px) / 672)
+			);
+  }
+}
+@media (max-width: 1440px) {
+  .main-screen__logo-container {
+    height: 427px;
+    height: calc(
+					219px + 208 * ((100vw - 768px) / 672)
+			);
+  }
+}
+@media (max-width: 768px) {
+  .main-screen__logo-container {
+    width: 344px;
+    width: calc(
+					232px + 112 * ((100vw - 375px) / 393)
+			);
+  }
+}
+@media (max-width: 768px) {
+  .main-screen__logo-container {
+    height: 219px;
+    height: calc(
+					148px + 71 * ((100vw - 375px) / 393)
+			);
+  }
 }
 .main-screen__mask {
   position: absolute;
@@ -279,6 +456,16 @@ body.lock {
   border-right: 0.34375rem solid transparent;
   border-top: 0.473125rem solid #FFFFFF;
   border-radius: 0.1875rem;
+}
+@media (max-width: 47.99875em) {
+  .main-screen__icon {
+    bottom: 1.6875rem;
+  }
+}
+@media (max-width: 23.43625em) {
+  .main-screen__icon {
+    bottom: 1.1875rem;
+  }
 }
 
 .header {
@@ -468,6 +655,77 @@ body.lock {
   bottom: 0.53125rem;
 }
 
+.concerts {
+  max-width: 36rem;
+}
+@media (max-width: 47.99875em) {
+  .concerts {
+    max-width: 33rem;
+  }
+}
+@media (max-width: 23.425em) {
+  .concerts {
+    max-width: 21rem;
+  }
+}
+.concerts__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.concerts__concert-info-block {
+  margin-bottom: 1.75rem;
+}
+.concerts__dates-button {
+  text-align: center;
+}
+
+.concert-info__row {
+  display: flex;
+  gap: 0.625rem;
+}
+.concert-info__row + .concert-info__row {
+  margin-top: 1.25rem;
+}
+.concert-info__column:first-child {
+  display: flex;
+  flex: 0 0 56%;
+  gap: 0.625rem;
+}
+@media (max-width: 29.99875em) {
+  .concert-info__column:first-child {
+    flex-direction: column;
+  }
+}
+@media (max-width: 23.425em) {
+  .concert-info__column:first-child {
+    flex: 0 0 47%;
+  }
+}
+.concert-info__column:last-child {
+  margin-left: auto;
+}
+@media (max-width: 29.99875em) {
+  .concert-info__column:last-child {
+    display: flex;
+    align-items: center;
+  }
+}
+.concert-info__date {
+  flex: 0 0 50%;
+}
+@media (max-width: 23.425em) {
+  .concert-info__date {
+    margin-bottom: 0.25rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .concert-info__date {
+    flex: 0 0 47%;
+  }
+}
+.concert-info__location {
+  flex: 0 1 auto;
+}
 .footer {
   background-color: #2D2D2D;
 }

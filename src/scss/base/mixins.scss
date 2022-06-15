@@ -31,22 +31,44 @@
 	font-family: 'Albertus Nova';
 }
 
-@mixin adaptive-value($property, $startSize, $minSize, $type) {
-	$addSize: $startSize - $minSize;
-	@if $type==1 {
+// @mixin adaptive-value($property, $startSize, $minSize, $type) { 
+// 	$addSize: $startSize - $minSize; 
+// 	@if $type == 1 { 
+// 		// Только если меньше контейнера
+// 		#{$property}: $startSize + px; 
+// 		@media (max-width: #{$maxWidthContainer + px}) { 
+// 				#{$property}: calc( 
+// 						#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthContainer - $minWidth}) 
+// 				); 
+// 		} 
+// 	} @else if $type == 2 { 
+// 		// Только если больше контейнера
+// 		#{$property}: $startSize + px; 
+// 		@media (min-width: #{$maxWidthContainer + px}) { 
+// 				#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth})); 
+// 		} 
+// 	} @else { 
+// 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth})); 
+// 	} 
+// }
+
+@mixin adaptive-value($property, $maxSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) { 
+	$addSize: $maxSize - $minSize; 
+	@if $keepSize == 1 { 
 		// Только если меньше контейнера
-		#{$property}: $startSize + px;
-		@media (max-width: #{$containerWidth + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$containerWidth - 320}));
-		}
-	} @else if $type==2 {
+		@media (max-width: #{$widthFrom + px}) { 
+			#{$property}: $maxSize + px; 
+			#{$property}: calc( 
+					#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$widthFrom - $widthTo}) 
+			); 
+		} 
+	} @else if $keepSize == 2 { 
 		// Только если больше контейнера
-		#{$property}: $startSize + px;
-		@media (min-width: #{$containerWidth + px}) {
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 320}));
-		}
-	} @else {
-		// Всегда
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 320}));
-	}
+		@media (min-width: #{$widthFrom + px}) { 
+			#{$property}: $maxSize + px; 
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$maxWidth - $widthTo})); 
+		} 
+	} @else { 
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$maxWidth - $widthTo})); 
+	} 
 }

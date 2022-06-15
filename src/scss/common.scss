@@ -14,12 +14,42 @@
 // }
 // <label for="email" class="visually-hidden">Email:</label>
 // <input id="email" type="text" class="form__input" placeholder="Email address">
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 5px;
+	text-align: center;
+	padding: rem(10) rem(9) rem(8) rem(9);
+	@include anim(.3s, 0s);
+
+	&--default {
+		color: $color-white;
+		background-color: $color-red;
+		width: rem(138);
+	}
+	&--transparent {
+		background-color: transparent;
+		color: #2D2D2D;
+		border: 1px solid #2D2D2D;
+		width: rem(138);
+	}
+	&--empty {
+		width: rem(138);
+	}
+	&--underline {
+		border-bottom: 1px solid #2D2D2D;
+		border-radius: 0;
+		padding: 0px 0px rem(1) 0px;
+	}
+
+}
+
 .text1 {
 	font-family: 'Albertus Nova';
 	font-weight: 400;
 	font-size: rem(14);
 	line-height: rem(20);
-	color: #FFFFFF;
+	color: $color-white;
 }
 
 .text2 {
@@ -27,11 +57,88 @@
 	font-weight: 200;
 	font-size: rem(24);
 	line-height: rem(33);
-	color: #2D2D2D;
-	@media (max-width: em(375)) {
+	color: $color-black;
+	@media (max-width: em(374.98)) {
 		font-size: rem(20);
 		line-height: rem(27);
 	}
+}
+
+.text3 {
+	font-family: 'Albertus Nova';
+	font-weight: 300;
+	font-size: rem(26);
+	line-height: rem(22);
+	color: #2D2D2D;
+	@media (max-width: em(374.98)) {
+		font-size: rem(24);
+		line-height: rem(22);
+	}
+}
+
+.text4 {
+	font-family: 'Albertus Nova';
+	font-weight: 300;
+	font-size: rem(22);
+	line-height: rem(30);
+	color: #2D2D2D;
+	@media (max-width: em(374.98)) {
+		font-size: rem(20);
+		line-height: rem(28);
+	}
+}
+
+.text5 {
+	font-family: 'Albertus Nova';
+	font-weight: 200;
+	font-size: rem(16);
+	line-height: rem(23);
+	color: #2D2D2D;
+}
+
+.text6 {
+	font-family: 'Albertus Nova';
+	font-style: normal;
+	font-weight: 400;
+	font-size: rem(30);
+	line-height: rem(42);
+	color: #2D2D2D;
+	@media (max-width: em(374.98)) {
+		font-size: rem(24);
+		line-height: rem(33);
+	}
+}
+
+.text7 {
+	font-family: 'Albertus Nova';
+	font-weight: 400; 
+	font-size: rem(16);
+	line-height: rem(22);
+	color: #FFFFFF;
+}
+
+.text8 {
+	font-family: 'Albertus Nova';
+	font-weight: 300;
+	font-size: rem(16);
+	line-height: rem(22);
+	color: #2D2D2D;
+}
+
+.text9 {
+	font-family: 'Albertus Nova';
+	font-weight: 400;
+	font-size: rem(18);
+	line-height: rem(25);
+	color: #FF1E00;
+}
+
+.text10 {
+	font-family: 'Albertus Nova';
+	font-weight: 400;
+	font-size: rem(16);
+	line-height: rem(22);
+	color: #2D2D2D;
 }
 
 .socials {
@@ -52,6 +159,8 @@
 		width: 100%;
 		max-height: rem(620);
 		height: 100%;
+		@include adaptive-value("height", 620, 330, 1440, 768, 1);
+		@include adaptive-value("height", 330, 280, 768, 375, 1);
 		object-fit: cover;
 	}
 	
@@ -63,8 +172,12 @@
 		transform: translate(-50%, -50%);
 		width: 100%;
 		height: 100%;
-		@include adaptive-value("max-width", 669, 232, 0);
-		@include adaptive-value("max-height", 427, 148, 0);
+		max-width: rem(669);
+		max-height: rem(427);
+		@include adaptive-value("width", 669, 344, 1440, 768, 1);
+		@include adaptive-value("height", 427, 219, 1440, 768, 1);
+		@include adaptive-value("width", 344, 232, 768, 375, 1);
+		@include adaptive-value("height", 219, 148, 768, 375, 1);
 	}
 
 	&__mask {
@@ -103,5 +216,12 @@
 			border-top: rem(7.57) solid $color-white;
 			border-radius: rem(3);
 		}
+		@media (max-width: em($breakpoint768)) {
+			bottom: rem(27);
+		}
+		@media (max-width: em(374.98)) {
+			bottom: rem(19);
+		}
 	}
 }
+

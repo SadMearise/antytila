@@ -12,6 +12,7 @@
 $fontFamily:'Open Sans', sans-serif;
 
 // Переменные
+$minWidth: 375;
 $maxWidth: 1440;
 $containerWidth: 1176; // Вписываем ширину контейнера как она есть
 $containerPadding: 40;
@@ -52,9 +53,8 @@ $color-gray-200: #989898;
 
 // Оболочка
 body {
-	// background-color: #FAFAFA;
-	background-color: #666;
-	color: $color-white;
+	background-color: #FAFAFA;
+	color: $color-black;
 	font-weight: $fw-400;
 	&.lock {
 		overflow: hidden;
