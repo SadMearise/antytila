@@ -1,0 +1,5 @@
+.nav-button--prev, .nav-button--next {
+	&::after {
+		display: none;
+	}
+}

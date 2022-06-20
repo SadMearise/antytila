@@ -1,23 +1,20 @@
 .concerts {
-	max-width: rem(576);
-	
+	max-width: 576px;
 	@media (max-width: em($breakpoint768)) {
-		max-width: rem(528);
+		max-width: 528px;
 	}
-	@media (max-width: em(374.8)) {
-		max-width: rem(336);
+	@media (max-width: em($breakpoint375)) {
+		max-width: 336px;
 	}
 	&__title {
-		text-align: center;
-		margin-bottom: rem(32);
+		margin-bottom: 32px;
 	}
 
 	&__concert-info-block {
-		margin-bottom: rem(28);
+		margin-bottom: 28px;
 	}
 
-	&__dates-button {
-		text-align: center;
+	&__page-change-button {
 	}
 }
 
@@ -25,9 +22,9 @@
 
 	&__row {
 		display: flex;
-		gap: rem(10);
+		gap: 10px;
 		& + & {
-			margin-top: rem(20);
+			margin-top: 20px;
 		}
 	}
 
@@ -36,11 +33,10 @@
 		&:first-child {
 			display: flex;
 			flex: 0 0 56%;
-			gap: rem(10);
 			@media (max-width: em($breakpoint480)) {
-				flex-direction: column;
+				display: block;
 			}
-			@media (max-width: em(374.8)) {
+			@media (max-width: em($breakpoint375)) {
 				flex: 0 0 47%;
 			}
 		}
@@ -56,8 +52,8 @@
 	&__date {
 	
 		flex: 0 0 50%;
-		@media (max-width: em(374.8)) {
-			margin-bottom: rem(4);
+		@media (max-width: em($breakpoint375)) {
+			margin-bottom: 4px;
 		}
 		@media (max-width: em($breakpoint768)) {
 			flex: 0 0 47%;
@@ -75,5 +71,231 @@
 	}
 
 	&__ticket-button {
+	}
+}
+
+.youtube {
+	position: relative;
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__content-box {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 66px;
+		@include adaptive-value('column-gap', 72, 16, 768, 375, 1);
+		@media (max-width: em($breakpoint768)) {
+			justify-content: left;
+		}
+		@media (max-width: em($breakpoint375)) {
+			column-gap: 16px;
+		}
+	}
+
+	&__content-box-photo {
+		flex-shrink: 1;
+		flex-basis: 334px;
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
+		@media (max-width: em($breakpoint768)) {
+			flex-basis: 198px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			flex-basis: 160px;
+		}
+
+	}
+
+	&__content-box-info {
+	}
+
+	&__info-title {
+		margin-bottom: 1px;
+	}
+
+	&__info-text {
+	}
+}
+
+.merch {
+	position: relative;
+	
+	&__swiper {
+
+	}
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__content-box {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		margin-bottom: 32px;
+		@media (max-width: em($breakpoint768)) {
+			margin-bottom: 28px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__page-change-button {
+	}
+
+	@media (max-width: em($breakpoint768)) {
+		.container {
+			max-width: none;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+.merch-swiper {
+	position: relative;
+	margin: 0 -12px !important;
+	&__cards {
+		display: flex;
+		margin-bottom: 28px;
+		@media (max-width: em($breakpoint768)) {
+			margin: 0 0 25px 14%;
+		}
+		@media (max-width: em($breakpoint375)) {
+			margin: 0 0 32px 26%;
+		}
+	}
+
+	&__card-block {
+		flex: 0 1 25%;
+		padding: 0 12px;
+		@media (max-width: em($breakpoint768)) {
+			flex: 0 1 36%;
+		}
+		@media (max-width: em($breakpoint375)) {
+			flex: 0 1 50%;
+		}
+		
+	}
+
+	&__card {
+		height: 399px;
+		@include adaptive-value('height', 399, 373, 1400, 768, 1);
+		@include adaptive-value('height', 373, 290, 768, 375, 1);
+		
+	}
+
+	&__navigation {
+		display: none;
+	}
+
+	&__button-prev {
+		position: absolute;
+		top: 130px !important;
+		left: 22px !important;
+		@media (max-width: em($breakpoint375)) {
+			top: 110px !important;
+		}
+	}
+	
+	&__button-next {
+		position: absolute;
+		top: 130px !important;
+		right: 22px !important;
+		@media (max-width: em($breakpoint375)) {
+			top: 110px !important;
+		}
+	}
+}
+
+.release {
+	
+	&__title {
+	}
+	&__content-box {
+	}
+
+	&__swiper {
+	}
+
+	&__page-change-button {
+	}
+
+	@media (max-width: em($breakpoint768)) {
+		.container {
+			max-width: none;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+.release-swiper {
+	position: relative;
+	margin: 32px -12px 28px !important;
+	@media (max-width: em($breakpoint768)) {
+		margin: 28px -12px 24px !important;
+	}
+	@media (max-width: em($breakpoint375)) {
+		margin: 24px -5px 20px !important;
+	}
+	&__items {
+		display: flex;
+		@media (max-width: em($breakpoint768)) {
+			margin-left: -8.1%;
+		}
+		@media (max-width: em($breakpoint375)) {
+			margin-left: -16%;
+		}
+	}
+
+	&__releases-item {
+		max-height: 176px;
+		flex: 0 1 16.6667%;
+		padding: 0 12px;
+		@media (max-width: em($breakpoint768)) {
+			flex: 0 0 23.3%;
+			max-height: 160px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			flex: 0 0 44.5%;
+			padding: 0 5px;
+		}
+	}
+
+	&__navigation {
+		display: none;
+	}
+
+	&__button-prev {
+		position: absolute;
+		left: 22px !important;
+		margin: 0 !important;
+		transform: translateY(-50%) rotate(180deg);
+	}
+
+	&__button-next {
+		position: absolute;
+		right: 22px !important;
+		margin: 0 !important;
+		transform: translateY(-50%);
 	}
 }

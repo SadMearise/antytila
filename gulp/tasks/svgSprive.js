@@ -11,6 +11,17 @@ export const svgSprive = () => {
 	)
 
 	.pipe(svgSprite({
+		shape: {
+			transform: [{
+				"svgo": {
+					"plugins": [{ 
+						removeAttrs: { 
+							attrs: '(fill|stroke|style)' 
+						} 
+					}]
+				}
+			}]
+		},
 		mode: {
 			stack: {
 				sprite: `../icons/icons.svg`,

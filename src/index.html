@@ -11,15 +11,16 @@
 			<section class="main-screen">
 				<span class="main-screen__icon"></span>
 				<h1 class="main-screen__logo-container ibg">
-					<img src="./img/header/logo.png" alt="">
+					<img src="./img/main-screen/logo.png" alt="logo">
 				</h1>
 				<div class="main-screen__mask"></div>
-				<img class="main-screen__bg" src="./img/header/bg.jpg" alt="">
+				<img class="main-screen__bg" src="./img/main-screen/bg.jpg" alt="mask">
 			</section>
 			<!-- / section-main-screen -->
-			
+
+			<!-- section-concerts -->
 			<section class="concerts vertical-indent vertical-indent--s container">
-				<h2 class="concerts__title text6">Концерти</h2>
+				<h2 class="concerts__title text6 tac">Концерти</h2>
 				<div class="concerts__concert-info-block concert-info">
 					<div class="concert-info__row">
 						<div class="concert-info__column">
@@ -120,22 +121,205 @@
 						</div>
 					</div>
 				</div>
-				<div class="concerts__dates-button">
+				<div class="concerts__link-button tac">
 					<a href="#" class="btn btn--underline text10">Всі дати</a>
 				</div>
 			</section>
-			<section class="youtube vertical-indent vertical-indent--s container container--wide">2</section>
-			<section class="merch vertical-indent vertical-indent--s container">3</section>
-			<section class="release vertical-indent vertical-indent--s container">4</section>
-			<section class="video vertical-indent vertical-indent--s container">5</section>
-			<section class="photo vertical-indent vertical-indent--s container">6</section>
-			<section class="novelties vertical-indent vertical-indent--s container">7</section>
+			<!-- / section-concerts -->
+
+			<!-- section-youtube -->
+			<section class="youtube">
+				<div class="youtube__bg ibg">
+					<img src="./img/youtube/bg.jpg" alt="background">
+				</div>
+				<div class="youtube__content-box vertical-indent vertical-indent--s container">
+					<div class="youtube__content-box-photo">
+						<img src="./img/youtube/photo.jpg" alt="author's photo">
+					</div>
+					<div class="youtube__content-box-info">
+						<div class="youtube__info-title text12">ПРЕМ’ЄРА!</div>
+						<div class="youtube__info-text text13">Дивись на YouTube!</div>
+					</div>
+				</div>
+			</section>
+			<!-- / section-youtube -->
+
+			<!-- section-merch -->
+			<section class="merch">
+				<div class="merch__bg ibg">
+					<img src="./img/bg.jpg" alt="background">
+				</div>
+				<div class="merch__content-box vertical-indent vertical-indent--s container">
+					<h2 class="merch__title text6 tac">Мерч</h2>
+					<div class="merch__swiper merch-swiper swiper">
+						<div class="merch-swiper__cards swiper-wrapper">
+							<div class="merch-swiper__card-block swiper-slide">
+								<div class="merch-swiper__card merch-card">
+									<div class="merch-card__hot-offer hot-offer text16">NEW</div>
+									<div class="merch-card__image">
+										<img src="./img/merch/product1.png" alt="product 1">
+									</div>
+									<div class="merch-card__footer">
+										<div class="merch-card__title text14">Магніт «АНТИТІЛА» 10Х6СМ</div>
+										<div class="merch-card__price text15">30 ₴</div>
+									</div>
+								</div>
+							</div>
+							<div class="merch-swiper__card-block swiper-slide">
+								<div class="merch-swiper__card merch-card">
+									<div class="merch-card__image">
+										<img src="./img/merch/product2.png" alt="product 2">
+									</div>
+									<div class="merch-card__footer">
+										<div class="merch-card__title text14">Футболка «Дельфіни» (чорна, чоловіча)</div>
+										<div class="merch-card__price text15">300 ₴</div>
+									</div>
+								</div>
+							</div>
+							<div class="merch-swiper__card-block swiper-slide">
+								<div class="merch-swiper__card merch-card">
+									<div class="merch-card__image">
+										<img src="./img/merch/product3.png" alt="product 3">
+									</div>
+									<div class="merch-card__footer">
+										<div class="merch-card__title text14">Магніт «Антитіла HELLO» 9х6см</div>
+										<div class="merch-card__price text15">30 ₴</div>
+									</div>
+								</div>
+							</div>
+							<div class="merch-swiper__card-block swiper-slide">
+								<div class="merch-swiper__card merch-card">
+									<div class="merch-card__hot-offer hot-offer hot-offer--red text16">SALE</div>
+									<div class="merch-card__image">
+										<img src="./img/merch/product4.png" alt="product 4">
+									</div>
+									<div class="merch-card__footer">
+										<div class="merch-card__title text14">Футболка «A» (червона, unisex)</div>
+										<div class="merch-card__price-block">
+											<div class="merch-card__price text15">350 ₴</div>
+											<s class="merch-card__discount text17">350 ₴</s>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="merch-swiper__navigation">
+							<div class="merch-swiper__button-prev nav-button nav-button--prev swiper-button-prev"></div>
+							<div class="merch-swiper__button-next nav-button nav-button--next swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="merch__page-change-button tac">
+						<a href="#" class="btn btn--underline text10">Переглянути весь мерч</a>
+					</div>
+				</div>
+			</section>
+			<!-- / section-merch -->
+
+			<!-- section-release -->
+			<section class="release">
+				<h2 class="release__title text6 tac">Релізи</h2>
+				<div class="release__content-box vertical-indent vertical-indent--s container">
+					<div class="release__swiper release-swiper swiper">
+						<div class="release-swiper__items swiper-wrapper">
+							<div class="release-swiper__releases-item release-item swiper-slide">
+								<div class="release-item__content">
+									<div class="release-item__content-name text18">HELLO</div>
+									<div class="release-item__content-year text19">(2019)</div>
+								</div>
+								<img src="./img/release/1.jpg" alt="release 1">
+							</div>
+							<div class="release-swiper__releases-item release-item swiper-slide">
+								<img src="./img/release/2.jpg" alt="release 2">
+							</div>
+							<div class="release-swiper__releases-item release-item swiper-slide">
+								<img src="./img/release/3.jpg" alt="release 3">
+							</div>
+							<div class="release-swiper__releases-item release-item swiper-slide">
+								<img src="./img/release/4.jpg" alt="release 4">
+							</div>
+							<div class="release-swiper__releases-item release-item swiper-slide">
+								<img src="./img/release/5.jpg" alt="release 5">
+							</div>
+							<div class="release-swiper__releases-item release-item swiper-slide">
+								<img src="./img/release/6.jpg" alt="release 6">
+							</div>
+						</div>
+						<div class="release-swiper__navigation">
+							<div class="release-swiper__button-prev nav-button nav-button--prev swiper-button-prev"></div>
+							<div class="release-swiper__button-next nav-button nav-button--next swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+				<div class="release__page-change-button tac">
+					<a href="#" class="btn btn--underline text10">Всі релізи</a>
+				</div>
+			</section>
+			<!-- / section-release -->
+
+			<!-- section-video -->
+			<section class="video vertical-indent vertical-indent--s container">
+				<h2 class="video__title text6 tac">Відео</h2>
+				<div class="video__page-change-button tac">
+					<a href="#" class="btn btn--underline text10">Більше відео на YouTube</a>
+				</div>
+			</section>
+			<!-- / section-video -->
+
+			<!-- section-photo -->
+			<section class="photo vertical-indent vertical-indent--s container">
+				<h2 class="photo__title text6 tac">Фото</h2>
+				<div class="photo__page-change-button tac">
+					<a href="#" class="btn btn--underline text10">Всі фото</a>
+				</div>
+			</section>
+			<!-- / section-photo -->
+
+			<!-- section-novelties -->
+			<section class="novelties">
+				<div class="novelties__bg ibg">
+					<img src="./img/bg.jpg" alt="background">
+				</div>
+				<div class="novelties__content-box vertical-indent vertical-indent--s container">
+					<h2 class="novelties__title text6 tac">Новини</h2>
+					<div class="novelties__page-change-button tac">
+						<a href="#" class="btn btn--underline text10">Всі новини</a>
+					</div>
+				</div>
+			</section>
+			<!-- / section-novelties -->
+
+			<!-- section-instagram -->
 			<section class="instagram vertical-indent vertical-indent--s container">8</section>
+			<!-- / section-instagram -->
+
+			<!-- section-community -->
 			<section class="community vertical-indent vertical-indent--s container">9</section>
+			<!-- / section-community -->
+
+			<!-- section-image-block -->
 			<section class="image-block container container--wide">10</section>
-			<section class="contacts vertical-indent vertical-indent--s container">11</section>
+			<!-- / section-image-block -->
+
+			<!-- section-contacts -->
+			<section class="contacts vertical-indent vertical-indent--s container">
+				<h2 class="contacts__title text6 tac">Контакти</h2>
+				<div class="contacts__items">
+					<div class="contacts__item contact-block">
+						<div class="contact-block__profession"></div>
+						<div class="contact-block__name"></div>
+						<div class="contact-block__phone-block">
+
+						</div>
+						<div class="contact-block__mail-block"></div>
+						<div class="contact-block__social"></div>
+					</div>
+				</div>
+			</section>
+			<!-- / section-contacts -->
+
 		</main>
 		@@include('html/footer.html', {})
+		
 	</div>
 	@@include('_js.html', {})
 </body>

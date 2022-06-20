@@ -17,8 +17,8 @@
 
 	&__socials {
 		position: absolute;
-		right: rem(60);
-		top: rem(40);
+		right: 60px;
+		top: 40px;
 		@media (max-width: em($breakpoint768)) {
 			display: none;
 		}
@@ -36,18 +36,18 @@
 	}
 	&__menu {
 		display: flex;
-		column-gap: rem(10);
+		column-gap: 10px;
 		align-items: center;
 		position: absolute;
-		top: rem(34);
-		left: rem(60);
+		top: 34px;
+		left: 60px;
 		@media (max-width: em($breakpoint768)) {
-			top: rem(12);
-			left: rem(28);
+			top: 12px;
+			left: 28px;
 		}
-		@media (max-width: em(374.8)) {
-			top: rem(8);
-			left: rem(20);
+		@media (max-width: em($breakpoint375)) {
+			top: 8px;
+			left: 20px;
 		}
 	}
 
@@ -64,18 +64,18 @@
 			transform: translate3d(0, 0, 0);
 			transition: all 0.3s ease 0s;
 			background-color: $color-white;
-			width: rem(407);
-			height: rem(90);
+			width: 407px;
+			height: 90px;
 			top: 0;
 			left: 0;
 			z-index: 4;
 			@media (max-width: em($breakpoint768)) {
-				width: rem(371);
-				height: rem(70);
+				width: 371px;
+				height: 70px;
 			}
 			@media (max-width: em($breakpoint768)) {
-				width: rem(267);
-				height: rem(50);
+				width: 267px;
+				height: 50px;
 			}
 		}
 	}
@@ -86,10 +86,10 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		row-gap: rem(16);
+		row-gap: 16px;
 		height: 100vh;
-		width: rem(408);
-		padding: rem(90) rem(60);
+		width: 408px;
+		padding: 90px 60px;
 		background-color: $color-white;
 		outline: 1px solid $color-black;
 		
@@ -97,12 +97,12 @@
 		@include anim(.3s, 0s);
 		overflow: auto;
 		@media (max-width: em($breakpoint768)) {
-			padding: rem(70) rem(28);
-			width: rem(372);
+			padding: 70px 28px;
+			width: 372px;
 		}
 		@media (max-width: em($breakpoint768)) {
-			padding: rem(58) rem(20);
-			width: rem(268);
+			padding: 58px 20px;
+			width: 268px;
 		}
 	}
 
@@ -111,12 +111,11 @@
 
 	&__item {
 		& + & {
-			margin-top: rem(16);
+			margin-top: 16px;
 		}
 	}
 
 	&__link {
-		
 		&:hover {
 			color: $color-red;
 			@include anim(.3s, 0s);
@@ -124,23 +123,30 @@
 	}
 
 	&__languages {
+		display: flex;
+		column-gap: 24px;
 	}
-
+	
 	&__language-button {
+		display: block;
+		max-width: 27px;
+		max-height: 20px;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__socials {
-		column-gap: rem(26);
+		column-gap: 26px;
 		@media (min-width: em($breakpoint768)) {
 			display: none;
 		}
-		@media (max-width: em(374.98)) {
-			column-gap: rem(16);
+		@media (max-width: em($breakpoint375)) {
+			column-gap: 16px;
 		}
 		svg {
-			path {
-				fill: $color-black;
-			}
+			fill: $color-black;
 		}
 	}
 }
@@ -148,26 +154,26 @@
 .icon-menu {
 	display: block;
 	position: relative;
-	width: rem(32);
-	height: rem(32);
+	width: 32px;
+	height: 32px;
 	cursor: pointer;
 	z-index: 5;
 	&__container {
 		position: absolute;
-		width: rem(22);
-		height: rem(19);
+		width: 22px;
+		height: 19px;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
 		span {
 			position: absolute;
-			top: rem(8.5);
+			top: 8.5px;
 			left: 0;
 			width: 100%;
-			height: rem(2);
-			border-radius: rem(2);
+			height: 2px;
+			border-radius: 2px;
 			background-color: $color-white;
-			border-radius: rem(2);
+			border-radius: 2px;
 			transition: all 0.3s ease 0s;
 			&:first-child{top: 0;}
 			&:last-child{top: auto; bottom: 0;}
@@ -181,11 +187,11 @@
 				background-color: $color-black;
 				&:first-child {
 					transform: rotate(-45deg); 
-					top: rem(8.5);
+					top: 8.5px;
 				}
 				&:last-child {
 					transform: rotate(45deg); 
-					bottom: rem(8.5);
+					bottom: 8.5px;
 				}
 			}
 		}

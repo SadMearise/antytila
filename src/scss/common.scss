@@ -14,32 +14,42 @@
 // }
 // <label for="email" class="visually-hidden">Email:</label>
 // <input id="email" type="text" class="form__input" placeholder="Email address">
+.tac {
+	text-align: center;
+}
+
 .btn {
 	display: inline-block;
 	box-sizing: border-box;
 	border-radius: 5px;
 	text-align: center;
-	padding: rem(10) rem(9) rem(8) rem(9);
+	padding: 10px 9px 8px 9px;
+	border: 2px solid transparent;
 	@include anim(.3s, 0s);
 
 	&--default {
 		color: $color-white;
 		background-color: $color-red;
-		width: rem(138);
+		width: 138px;
+		&:hover {
+			background-color: transparent;
+			border: 2px solid #2D2D2D;
+			color: $color-black;
+		}
 	}
 	&--transparent {
 		background-color: transparent;
 		color: #2D2D2D;
 		border: 1px solid #2D2D2D;
-		width: rem(138);
+		width: 138px;
 	}
 	&--empty {
-		width: rem(138);
+		width: 138px;
 	}
 	&--underline {
 		border-bottom: 1px solid #2D2D2D;
 		border-radius: 0;
-		padding: 0px 0px rem(1) 0px;
+		padding: 0px 0px 1px 0px;
 	}
 
 }
@@ -47,52 +57,52 @@
 .text1 {
 	font-family: 'Albertus Nova';
 	font-weight: 400;
-	font-size: rem(14);
-	line-height: rem(20);
+	font-size: 14px;
+	line-height: math.div(20, 14);
 	color: $color-white;
 }
 
 .text2 {
 	font-family: 'Albertus Nova';
 	font-weight: 200;
-	font-size: rem(24);
-	line-height: rem(33);
+	font-size: 24px;
+	line-height: math.div(33, 24);
 	color: $color-black;
-	@media (max-width: em(374.98)) {
-		font-size: rem(20);
-		line-height: rem(27);
+	@media (max-width: em($breakpoint375)) {
+		font-size: 20px;
+		line-height: math.div(27, 20);
 	}
 }
 
 .text3 {
 	font-family: 'Albertus Nova';
 	font-weight: 300;
-	font-size: rem(26);
-	line-height: rem(22);
+	font-size: 26px;
+	line-height: math.div(22, 26);
 	color: #2D2D2D;
-	@media (max-width: em(374.98)) {
-		font-size: rem(24);
-		line-height: rem(22);
+	@media (max-width: em($breakpoint375)) {
+		font-size: 24px;
+		line-height: math.div(22, 24);
 	}
 }
 
 .text4 {
 	font-family: 'Albertus Nova';
 	font-weight: 300;
-	font-size: rem(22);
-	line-height: rem(30);
+	font-size: 22px;
+	line-height: math.div(30, 20);
 	color: #2D2D2D;
-	@media (max-width: em(374.98)) {
-		font-size: rem(20);
-		line-height: rem(28);
+	@media (max-width: em($breakpoint375)) {
+		font-size: 20px;
+		line-height: math.div(28, 20);
 	}
 }
 
 .text5 {
 	font-family: 'Albertus Nova';
 	font-weight: 200;
-	font-size: rem(16);
-	line-height: rem(23);
+	font-size: 16px;
+	line-height: math.div(23, 16);
 	color: #2D2D2D;
 }
 
@@ -100,56 +110,144 @@
 	font-family: 'Albertus Nova';
 	font-style: normal;
 	font-weight: 400;
-	font-size: rem(30);
-	line-height: rem(42);
+	font-size: 30px;
+	line-height: math.div(32, 30);
 	color: #2D2D2D;
-	@media (max-width: em(374.98)) {
-		font-size: rem(24);
-		line-height: rem(33);
+	@media (max-width: em($breakpoint375)) {
+		font-size: 24px;
+		line-height: math.div(33, 24);
 	}
 }
 
 .text7 {
 	font-family: 'Albertus Nova';
 	font-weight: 400; 
-	font-size: rem(16);
-	line-height: rem(22);
+	font-size: 16px;
+	line-height: math.div(22, 16);
 	color: #FFFFFF;
 }
 
 .text8 {
 	font-family: 'Albertus Nova';
 	font-weight: 300;
-	font-size: rem(16);
-	line-height: rem(22);
+	font-size: 16px;
+	line-height: math.div(22, 16);
 	color: #2D2D2D;
 }
 
 .text9 {
 	font-family: 'Albertus Nova';
 	font-weight: 400;
-	font-size: rem(18);
-	line-height: rem(25);
+	font-size: 18px;
+	line-height: math.div(25, 18);
 	color: #FF1E00;
 }
 
 .text10 {
 	font-family: 'Albertus Nova';
 	font-weight: 400;
-	font-size: rem(16);
-	line-height: rem(22);
+	font-size: 16px;
+	line-height: math.div(22, 16);
 	color: #2D2D2D;
+}
+
+.text11 {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: #FFFFFF;
+}
+
+.text12 {
+	font-family: 'Albertus Nova';
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 55px;
+	color: #FFFFFF;
+
+	@include adaptive-value('font-size', 40, 24, 768, 375, 1);
+	@include adaptive-value('line-height', 55, 33, 768, 375, 1);
+}
+
+.text13 {
+	font-family: 'Albertus Nova';
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 44px;
+	color: #FFFFFF;
+	@include adaptive-value('font-size', 28, 20, 768, 375, 1);
+	@include adaptive-value('line-height', 39, 28, 768, 375, 1);
+}
+
+.text14 {
+	font-family: 'Albertus Nova';
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 19px;
+	color: #2D2D2D;
+}
+
+.text15 {
+	font-family: 'Albertus Nova';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #2D2D2D;
+}
+
+.text16 {
+	font-family: 'Circe Slab C';
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 15px;
+	color: #FFFFFF;
+}
+
+.text17 {
+	font-family: 'Albertus Nova';
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 19px;
+	color: #989898;
+}
+
+.text18 {
+	font-family: 'Albertus Nova';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #FFFFFF;
+}
+
+.text19 {
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 27px;
+	color: #FFFFFF;
 }
 
 .socials {
 	display: flex;
-	column-gap: rem(24);
+	column-gap: 24px;
+	&__item {
+	}
+
 	&__social {
+		display: block;
+		max-width: 24px;
+		max-height: 24px;
 		svg {
-			display: block;
-			width: rem(20);
-			height: rem(20);
+			max-width: 24px;
+			max-height: 24px;
+			fill: $color-white;
+			use {
+				width: 100%;
+				height: auto;
+			}
 		}
+
 	}
 }
 
@@ -157,7 +255,7 @@
 	position: relative;
 	&__bg {
 		width: 100%;
-		max-height: rem(620);
+		max-height: 620px;
 		height: 100%;
 		@include adaptive-value("height", 620, 330, 1440, 768, 1);
 		@include adaptive-value("height", 330, 280, 768, 375, 1);
@@ -172,8 +270,8 @@
 		transform: translate(-50%, -50%);
 		width: 100%;
 		height: 100%;
-		max-width: rem(669);
-		max-height: rem(427);
+		max-width: 669px;
+		max-height: 427px;
 		@include adaptive-value("width", 669, 344, 1440, 768, 1);
 		@include adaptive-value("height", 427, 219, 1440, 768, 1);
 		@include adaptive-value("width", 344, 232, 768, 375, 1);
@@ -193,11 +291,11 @@
 	&__icon {
 		position: absolute;
 		z-index: 100;
-		bottom: rem(43);
+		bottom: 43px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: rem(22);
-		height: rem(22);
+		width: 22px;
+		height: 22px;
 		border: 2px solid $color-white;
 		border-radius: 100%;
 		background-color: transparent;
@@ -211,17 +309,159 @@
 			top: 56%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			border-left: rem(5.5) solid transparent;
-			border-right: rem(5.5) solid transparent;
-			border-top: rem(7.57) solid $color-white;
-			border-radius: rem(3);
+			border-left: 5.5px solid transparent;
+			border-right: 5.5px solid transparent;
+			border-top: 7.57px solid $color-white;
+			border-radius: 3px;
 		}
 		@media (max-width: em($breakpoint768)) {
-			bottom: rem(27);
+			bottom: 27px;
 		}
-		@media (max-width: em(374.98)) {
-			bottom: rem(19);
+		@media (max-width: em($breakpoint375)) {
+			bottom: 19px;
 		}
 	}
 }
+
+.merch-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	
+	border-radius: 10px;
+	padding: 12px 12px 16px;
+	@include adaptive-value('padding-top', 12, 0, 768, 375, 1);
+	@include adaptive-value('padding-bottom', 16, 0, 768, 375, 1);
+	@include adaptive-value('padding-right', 12, 0, 768, 375, 1);
+	@include adaptive-value('padding-left', 12, 0, 768, 375, 1);
+	@media (max-width: em($breakpoint375)) {
+		outline: transparent;
+	}
+	&__hot-offer {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+	}
+
+	&__image {
+		display: flex;
+		flex: 1 0 auto;
+		img {
+			max-height: 260px;
+			width: 100%;
+			object-fit: contain;
+			height: auto;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 68px;
+		justify-content: space-between;
+		@media (max-width: em($breakpoint768)) {
+			flex: 0 0 75px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			flex: 0 0 84px;
+		}
+	}
+
+	&__title {
+	}
+
+	&__price-block {
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+	}
+
+	&__price {
+	}
+
+	&__discount {
+	}
+	@media (min-width: em($breakpoint375)) {
+		border: 1px solid #989898;
+	}
+}
+
+.hot-offer {
+	display: inline-block;
+	max-width: 56px;
+	text-align: center;
+	width: 100%;
+	border-radius: 5px;
+	background-color: $color-green;
+	padding: 7px;
+	&--red {
+		background-color: $color-red;
+	}
+}
+
+.nav-button {
+	position: relative;
+	display: inline-block;
+	width: 32px !important;
+	height: 32px !important;
+	border-radius: 100%;
+	background-color: rgba($color-white, 60%);
+	&::before {
+		content: '';
+		position: absolute;
+		width: 9px;
+		height: 18px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: url('../img/arrow.svg') 50% 50% no-repeat;
+	}
+	&--prev {
+		transform: rotate(180deg);
+	}
+	&--next {
+		
+	}
+}
+
+.release-item {
+	position: relative;
+	height: auto;
+	&__content {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 100;
+		background: rgba(0, 0, 0, 0.7);
+		width: 100%;
+		height: 100%;
+	}
+
+	&__content-name {
+		font-family: 'Albertus Nova';
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		color: #FFFFFF;
+	}
+
+	&__content-year {
+		margin-bottom: 30px;
+		font-family: 'Noto Sans';
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 27px;
+		color: #FFFFFF;
+	}
+
+	img {
+		border-radius: 10px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		
+	}
+}
+
 

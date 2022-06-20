@@ -54,18 +54,28 @@
 
 @mixin adaptive-value($property, $maxSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) { 
 	$addSize: $maxSize - $minSize; 
-	@if $keepSize == 1 { 
-		// Только если меньше контейнера
-		@media (max-width: #{$widthFrom + px}) { 
-			#{$property}: $maxSize + px; 
+	@if $keepSize == 1 {
+		// В промежутке
+		@media (max-width: #{$widthTo + px}) {
+			#{$property}: $minSize + px; 
+		}
+		@media (max-width: #{$widthFrom + px}) and (min-width: #{$widthTo + px}) { 
 			#{$property}: calc( 
 					#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$widthFrom - $widthTo}) 
 			); 
 		} 
 	} @else if $keepSize == 2 { 
+		// Только если меньше контейнера
+		#{$property}: $maxSize + px; 
+		@media (max-width: #{$widthFrom + px}) { 
+			#{$property}: calc( 
+					#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$widthFrom - $widthTo}) 
+			); 
+		} 
+	} @else if $keepSize == 3 { 
 		// Только если больше контейнера
+		#{$property}: $maxSize + px; 
 		@media (min-width: #{$widthFrom + px}) { 
-			#{$property}: $maxSize + px; 
 			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$widthTo + px}) / #{$maxWidth - $widthTo})); 
 		} 
 	} @else { 
