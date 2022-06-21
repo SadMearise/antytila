@@ -31,3 +31,22 @@ export function toggleClassActive() {
 		})
 	}
 }
+
+export function addVideo() {
+	window.addEventListener('DOMContentLoaded', function() {
+		const videos = document.querySelectorAll('.video__video');
+		
+		videos.forEach(function(video) {
+			video.addEventListener('click', function() {
+				if(video.classList.contains('_active')) {
+					return;
+				}
+				video.classList.add("_active");
+
+				const src = video.dataset.src;
+				video.insertAdjacentHTML('afterbegin', `<iframe src="${src}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+			})
+		})
+
+	})
+}

@@ -5,3 +5,4 @@ import "./modules/swiper-options.js";
 flsFunctions.isWebp();
 flsFunctions.ibg();
 flsFunctions.toggleClassActive();
+flsFunctions.addVideo();

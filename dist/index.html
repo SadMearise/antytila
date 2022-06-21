@@ -8,6 +8,7 @@
 	<title>Home Page</title>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header">
@@ -147,14 +148,14 @@
 					<img src="./img/main-screen/logo.png" alt="logo">
 				</h1>
 				<div class="main-screen__mask"></div>
-				<img class="main-screen__bg" src="./img/main-screen/bg.jpg" alt="mask">
+				<img class="main-screen__bg" src="./img/main-screen/bg.jpg" alt="background">
 			</section>
 			<!-- / section-main-screen -->
 
 			<!-- section-concerts -->
-			<section class="concerts vertical-indent vertical-indent--s container">
+			<section class="concerts vertical-indent vertical-indent--m container">
 				<h2 class="concerts__title text6 tac">Концерти</h2>
-				<div class="concerts__concert-info-block concert-info">
+				<div class="concerts__concert-info-block concert-info vertical-indent vertical-indent--xs">
 					<div class="concert-info__row">
 						<div class="concert-info__column">
 							<div class="concert-info__date text3">3 червня</div>
@@ -265,7 +266,7 @@
 				<div class="youtube__bg ibg">
 					<img src="./img/youtube/bg.jpg" alt="background">
 				</div>
-				<div class="youtube__content-box vertical-indent vertical-indent--s container">
+				<div class="youtube__content-box vertical-indent vertical-indent--m container">
 					<div class="youtube__content-box-photo">
 						<img src="./img/youtube/photo.jpg" alt="author's photo">
 					</div>
@@ -282,9 +283,9 @@
 				<div class="merch__bg ibg">
 					<img src="./img/bg.jpg" alt="background">
 				</div>
-				<div class="merch__content-box vertical-indent vertical-indent--s container">
+				<div class="merch__content-box vertical-indent vertical-indent--m container">
 					<h2 class="merch__title text6 tac">Мерч</h2>
-					<div class="merch__swiper merch-swiper swiper">
+					<div class="merch__swiper merch-swiper swiper vertical-indent vertical-indent--xs">
 						<div class="merch-swiper__cards swiper-wrapper">
 							<div class="merch-swiper__card-block swiper-slide">
 								<div class="merch-swiper__card merch-card">
@@ -304,7 +305,8 @@
 										<img src="./img/merch/product2.png" alt="product 2">
 									</div>
 									<div class="merch-card__footer">
-										<div class="merch-card__title text14">Футболка «Дельфіни» (чорна, чоловіча)</div>
+										<div class="merch-card__title text14">Футболка «Дельфіни» (чорна, чоловіча)
+										</div>
 										<div class="merch-card__price text15">300 ₴</div>
 									</div>
 								</div>
@@ -350,82 +352,161 @@
 
 			<!-- section-release -->
 			<section class="release">
-				<h2 class="release__title text6 tac">Релізи</h2>
-				<div class="release__content-box vertical-indent vertical-indent--s container">
-					<div class="release__swiper">
-						<div class="release-swiper__items">
-							<div class="release-swiper__releases-item release-item">
-								<div class="release-item__mask">
-									<div class="release-item__content">
-										<div class="release-item__content-name text18">HELLO</div>
-										<div class="release-item__content-year text19">(2019)</div>
+				<div class="release__content-box vertical-indent vertical-indent--m container">
+					<h2 class="release__title text6 tac">Релізи</h2>
+					<div class="release__swiper release-swiper swiper vertical-indent vertical-indent--xs">
+						<div class="release-swiper__items swiper-wrapper">
+							<div class="release-swiper__releases-item-container swiper-slide">
+								<div class="release-swiper__releases-item release-item">
+									<div class="release-item__mask">
+										<div class="release-item__content">
+											<div class="release-item__content-name text18">HELLO</div>
+											<div class="release-item__content-year text19">(2019)</div>
+										</div>
 									</div>
+									<img class="release-item__image" src="./img/release/1.jpg" alt="release 1">
 								</div>
-								<img class="release-item__image" src="./img/release/1.jpg" alt="release 1">
 							</div>
-							<div class="release-swiper__releases-item release-item">
-								<div class="release-item__mask">
-									<div class="release-item__content">
-										<div class="release-item__content-name text18">HELLO</div>
-										<div class="release-item__content-year text19">(2019)</div>
+							<div class="release-swiper__releases-item-container swiper-slide">
+								<div class="release-swiper__releases-item release-item">
+									<div class="release-item__mask">
+										<div class="release-item__content">
+											<div class="release-item__content-name text18">HELLO</div>
+											<div class="release-item__content-year text19">(2019)</div>
+										</div>
 									</div>
+									<img class="release-item__image" src="./img/release/2.jpg" alt="release 2">
 								</div>
-								<img class="release-item__image" src="./img/release/2.jpg" alt="release 2">
 							</div>
-							<div class="release-swiper__releases-item release-item">
-								<div class="release-item__mask">
-									<div class="release-item__content">
-										<div class="release-item__content-name text18">HELLO</div>
-										<div class="release-item__content-year text19">(2019)</div>
+							<div class="release-swiper__releases-item-container swiper-slide">
+								<div class="release-swiper__releases-item release-item">
+									<div class="release-item__mask">
+										<div class="release-item__content">
+											<div class="release-item__content-name text18">HELLO</div>
+											<div class="release-item__content-year text19">(2019)</div>
+										</div>
 									</div>
+									<img class="release-item__image" src="./img/release/3.jpg" alt="release 3">
 								</div>
-								<img class="release-item__image" src="./img/main-screen/bg.jpg" alt="release 3">
 							</div>
-							<div class="release-swiper__releases-item release-item">
-								<div class="release-item__mask">
-									<div class="release-item__content">
-										<div class="release-item__content-name text18">HELLO</div>
-										<div class="release-item__content-year text19">(2019)</div>
+							<div class="release-swiper__releases-item-container swiper-slide">
+								<div class="release-swiper__releases-item release-item">
+									<div class="release-item__mask">
+										<div class="release-item__content">
+											<div class="release-item__content-name text18">HELLO</div>
+											<div class="release-item__content-year text19">(2019)</div>
+										</div>
 									</div>
+									<img class="release-item__image" src="./img/release/4.jpg" alt="release 4">
 								</div>
-								<img class="release-item__image" src="./img/header/mini-logo.png" alt="release 4">
 							</div>
-							<div class="release-swiper__releases-item release-item">
-								<div class="release-item__mask">
-									<div class="release-item__content">
-										<div class="release-item__content-name text18">HELLO</div>
-										<div class="release-item__content-year text19">(2019)</div>
+							<div class="release-swiper__releases-item-container swiper-slide">
+								<div class="release-swiper__releases-item release-item">
+									<div class="release-item__mask">
+										<div class="release-item__content">
+											<div class="release-item__content-name text18">HELLO</div>
+											<div class="release-item__content-year text19">(2019)</div>
+										</div>
 									</div>
+									<img class="release-item__image" src="./img/release/5.jpg" alt="release 5">
 								</div>
-								<img class="release-item__image" src="./img/release/5.jpg" alt="release 5">
 							</div>
-							<div class="release-swiper__releases-item release-item">
-								<div class="release-item__mask">
-									<div class="release-item__content">
-										<div class="release-item__content-name text18">HELLO</div>
-										<div class="release-item__content-year text19">(2019)</div>
+							<div class="release-swiper__releases-item-container swiper-slide">
+								<div class="release-swiper__releases-item release-item">
+									<div class="release-item__mask">
+										<div class="release-item__content">
+											<div class="release-item__content-name text18">HELLO</div>
+											<div class="release-item__content-year text19">(2019)</div>
+										</div>
 									</div>
+									<img class="release-item__image" src="./img/release/6.jpg" alt="release 6">
 								</div>
-								<img class="release-item__image" src="./img/release/6.jpg" alt="release 6">
 							</div>
-							
-							
 						</div>
 						<div class="release-swiper__navigation">
-							<div class="release-swiper__button-prev nav-button nav-button--prev swiper-button-prev"></div>
-							<div class="release-swiper__button-next nav-button nav-button--next swiper-button-next"></div>
+							<div class="release-swiper__button-prev nav-button nav-button--prev swiper-button-prev">
+							</div>
+							<div class="release-swiper__button-next nav-button nav-button--next swiper-button-next">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="release__page-change-button tac">
-					<a href="#" class="btn btn--underline text10">Всі релізи</a>
+					<div class="release__page-change-button tac">
+						<a href="#" class="btn btn--underline text10">Всі релізи</a>
+					</div>
 				</div>
 			</section>
 			<!-- / section-release -->
 
 			<!-- section-video -->
-			<section class="video vertical-indent vertical-indent--s container">
+			<section class="video vertical-indent vertical-indent--m container">
 				<h2 class="video__title text6 tac">Відео</h2>
+				<div class="video__videos-grid vertical-indent vertical-indent--xs">
+					<div class="video__videos-grid-item video1">
+						<div class="video__video" data-src="https://www.youtube.com/embed/WKKh9IHo7ws"></div>
+						<div class="video__icon-play ibg">
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.8"
+									d="M60.1095 17.1203C59.7927 15.8548 59.1476 14.6952 58.2392 13.7587C57.3309 12.8223 56.1915 12.1422 54.9362 11.787C50.3495 10.667 32.0028 10.667 32.0028 10.667C32.0028 10.667 13.6562 10.667 9.06949 11.8937C7.81415 12.2488 6.67477 12.929 5.76642 13.8654C4.85807 14.8019 4.21293 15.9614 3.89616 17.227C3.05673 21.8818 2.64612 26.6038 2.66949 31.3337C2.63957 36.0991 3.05021 40.8571 3.89616 45.547C4.24538 46.7733 4.90498 47.8887 5.81121 48.7856C6.71744 49.6825 7.83968 50.3305 9.06949 50.667C13.6562 51.8937 32.0028 51.8937 32.0028 51.8937C32.0028 51.8937 50.3495 51.8937 54.9362 50.667C56.1915 50.3118 57.3309 49.6317 58.2392 48.6952C59.1476 47.7588 59.7927 46.5992 60.1095 45.3337C60.9424 40.7139 61.353 36.0279 61.3362 31.3337C61.3661 26.5682 60.9554 21.8102 60.1095 17.1203Z"
+									fill="black" />
+								<path d="M26 40.0533L41.3333 31.3333L26 22.6133V40.0533Z" fill="white" />
+							</svg>
+						</div>
+						<img class="video__videos-grid-bg" src="./img/video/1.jpg" alt="background">
+					</div>
+					<div class="video__videos-grid-item video2">
+						<div class="video__video" data-src="https://www.youtube.com/embed/IdCnfoCpHMY"></div>
+						<div class="video__icon-play ibg">
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.8"
+									d="M60.1095 17.1203C59.7927 15.8548 59.1476 14.6952 58.2392 13.7587C57.3309 12.8223 56.1915 12.1422 54.9362 11.787C50.3495 10.667 32.0028 10.667 32.0028 10.667C32.0028 10.667 13.6562 10.667 9.06949 11.8937C7.81415 12.2488 6.67477 12.929 5.76642 13.8654C4.85807 14.8019 4.21293 15.9614 3.89616 17.227C3.05673 21.8818 2.64612 26.6038 2.66949 31.3337C2.63957 36.0991 3.05021 40.8571 3.89616 45.547C4.24538 46.7733 4.90498 47.8887 5.81121 48.7856C6.71744 49.6825 7.83968 50.3305 9.06949 50.667C13.6562 51.8937 32.0028 51.8937 32.0028 51.8937C32.0028 51.8937 50.3495 51.8937 54.9362 50.667C56.1915 50.3118 57.3309 49.6317 58.2392 48.6952C59.1476 47.7588 59.7927 46.5992 60.1095 45.3337C60.9424 40.7139 61.353 36.0279 61.3362 31.3337C61.3661 26.5682 60.9554 21.8102 60.1095 17.1203Z"
+									fill="black" />
+								<path d="M26 40.0533L41.3333 31.3333L26 22.6133V40.0533Z" fill="white" />
+							</svg>
+						</div>
+						<img class="video__videos-grid-bg" src="./img/video/2.jpg" alt="background">
+					</div>
+					<div class="video__videos-grid-item video3">
+						<div class="video__video" data-src="https://www.youtube.com/embed/B9gvM_-WYwo"></div>
+						<div class="video__icon-play ibg">
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.8"
+									d="M60.1095 17.1203C59.7927 15.8548 59.1476 14.6952 58.2392 13.7587C57.3309 12.8223 56.1915 12.1422 54.9362 11.787C50.3495 10.667 32.0028 10.667 32.0028 10.667C32.0028 10.667 13.6562 10.667 9.06949 11.8937C7.81415 12.2488 6.67477 12.929 5.76642 13.8654C4.85807 14.8019 4.21293 15.9614 3.89616 17.227C3.05673 21.8818 2.64612 26.6038 2.66949 31.3337C2.63957 36.0991 3.05021 40.8571 3.89616 45.547C4.24538 46.7733 4.90498 47.8887 5.81121 48.7856C6.71744 49.6825 7.83968 50.3305 9.06949 50.667C13.6562 51.8937 32.0028 51.8937 32.0028 51.8937C32.0028 51.8937 50.3495 51.8937 54.9362 50.667C56.1915 50.3118 57.3309 49.6317 58.2392 48.6952C59.1476 47.7588 59.7927 46.5992 60.1095 45.3337C60.9424 40.7139 61.353 36.0279 61.3362 31.3337C61.3661 26.5682 60.9554 21.8102 60.1095 17.1203Z"
+									fill="black" />
+								<path d="M26 40.0533L41.3333 31.3333L26 22.6133V40.0533Z" fill="white" />
+							</svg>
+						</div>
+						<img class="video__videos-grid-bg" src="./img/video/3.jpg" alt="background">
+					</div>
+					<div class="video__videos-grid-item video4">
+						<div class="video__video" data-src="https://www.youtube.com/embed/0kExxJnXbQE"></div>
+						<div class="video__icon-play ibg">
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.8"
+									d="M60.1095 17.1203C59.7927 15.8548 59.1476 14.6952 58.2392 13.7587C57.3309 12.8223 56.1915 12.1422 54.9362 11.787C50.3495 10.667 32.0028 10.667 32.0028 10.667C32.0028 10.667 13.6562 10.667 9.06949 11.8937C7.81415 12.2488 6.67477 12.929 5.76642 13.8654C4.85807 14.8019 4.21293 15.9614 3.89616 17.227C3.05673 21.8818 2.64612 26.6038 2.66949 31.3337C2.63957 36.0991 3.05021 40.8571 3.89616 45.547C4.24538 46.7733 4.90498 47.8887 5.81121 48.7856C6.71744 49.6825 7.83968 50.3305 9.06949 50.667C13.6562 51.8937 32.0028 51.8937 32.0028 51.8937C32.0028 51.8937 50.3495 51.8937 54.9362 50.667C56.1915 50.3118 57.3309 49.6317 58.2392 48.6952C59.1476 47.7588 59.7927 46.5992 60.1095 45.3337C60.9424 40.7139 61.353 36.0279 61.3362 31.3337C61.3661 26.5682 60.9554 21.8102 60.1095 17.1203Z"
+									fill="black" />
+								<path d="M26 40.0533L41.3333 31.3333L26 22.6133V40.0533Z" fill="white" />
+							</svg>
+						</div>
+						<img class="video__videos-grid-bg" src="./img/video/4.jpg" alt="background">
+					</div>
+					<div class="video__videos-grid-item video5">
+						<div class="video__video" data-src="https://www.youtube.com/embed/xcNBCgHdJSk"></div>
+						<div class="video__icon-play ibg">
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.8"
+									d="M60.1095 17.1203C59.7927 15.8548 59.1476 14.6952 58.2392 13.7587C57.3309 12.8223 56.1915 12.1422 54.9362 11.787C50.3495 10.667 32.0028 10.667 32.0028 10.667C32.0028 10.667 13.6562 10.667 9.06949 11.8937C7.81415 12.2488 6.67477 12.929 5.76642 13.8654C4.85807 14.8019 4.21293 15.9614 3.89616 17.227C3.05673 21.8818 2.64612 26.6038 2.66949 31.3337C2.63957 36.0991 3.05021 40.8571 3.89616 45.547C4.24538 46.7733 4.90498 47.8887 5.81121 48.7856C6.71744 49.6825 7.83968 50.3305 9.06949 50.667C13.6562 51.8937 32.0028 51.8937 32.0028 51.8937C32.0028 51.8937 50.3495 51.8937 54.9362 50.667C56.1915 50.3118 57.3309 49.6317 58.2392 48.6952C59.1476 47.7588 59.7927 46.5992 60.1095 45.3337C60.9424 40.7139 61.353 36.0279 61.3362 31.3337C61.3661 26.5682 60.9554 21.8102 60.1095 17.1203Z"
+									fill="black" />
+								<path d="M26 40.0533L41.3333 31.3333L26 22.6133V40.0533Z" fill="white" />
+							</svg>
+						</div>
+						<img class="video__videos-grid-bg" src="./img/video/5.jpg" alt="background">
+					</div>
+				</div>
 				<div class="video__page-change-button tac">
 					<a href="#" class="btn btn--underline text10">Більше відео на YouTube</a>
 				</div>
@@ -433,7 +514,7 @@
 			<!-- / section-video -->
 
 			<!-- section-photo -->
-			<section class="photo vertical-indent vertical-indent--s container">
+			<section class="photo vertical-indent vertical-indent--m container">
 				<h2 class="photo__title text6 tac">Фото</h2>
 				<div class="photo__page-change-button tac">
 					<a href="#" class="btn btn--underline text10">Всі фото</a>
@@ -446,7 +527,7 @@
 				<div class="novelties__bg ibg">
 					<img src="./img/bg.jpg" alt="background">
 				</div>
-				<div class="novelties__content-box vertical-indent vertical-indent--s container">
+				<div class="novelties__content-box vertical-indent vertical-indent--m container">
 					<h2 class="novelties__title text6 tac">Новини</h2>
 					<div class="novelties__page-change-button tac">
 						<a href="#" class="btn btn--underline text10">Всі новини</a>
@@ -456,19 +537,21 @@
 			<!-- / section-novelties -->
 
 			<!-- section-instagram -->
-			<section class="instagram vertical-indent vertical-indent--s container">8</section>
+			<section class="instagram vertical-indent vertical-indent--m container">8</section>
 			<!-- / section-instagram -->
 
 			<!-- section-community -->
-			<section class="community vertical-indent vertical-indent--s container">9</section>
+			<section class="community vertical-indent vertical-indent--m container">9</section>
 			<!-- / section-community -->
 
 			<!-- section-image-block -->
-			<section class="image-block container container--wide">10</section>
+			<section class="image-block">
+				<img class="image-block__bg" src="./img/image-block/bg.jpg" alt="background">
+			</section>
 			<!-- / section-image-block -->
 
 			<!-- section-contacts -->
-			<section class="contacts vertical-indent vertical-indent--s container">
+			<section class="contacts vertical-indent vertical-indent--m container">
 				<h2 class="contacts__title text6 tac">Контакти</h2>
 				<div class="contacts__items">
 					<div class="contacts__item contact-block">
@@ -486,7 +569,7 @@
 
 		</main>
 		<footer class="footer">
-	<div class="footer__content container vertical-indent vertical-indent--xs">
+	<div class="footer__content container vertical-indent vertical-indent--s">
 		<ul class="footer__socials socials">
 			<li class="socials__item">
 				<a href="#" class="socials__social">
@@ -527,8 +610,9 @@
 		<div class="footer__copy text11">© 2022 Антитіла</div>
 	</div>
 </footer>
-		
+
 	</div>
 	<script src="js/app.min.js"></script>
 </body>
+
 </html>
