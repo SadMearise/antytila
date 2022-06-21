@@ -197,10 +197,10 @@
 	}
 
 	&__card {
-		height: 399px;
-		@include adaptive-value('height', 399, 373, 1400, 768, 1);
-		@include adaptive-value('height', 373, 290, 768, 375, 1);
-		
+		height: 100% !important;
+		min-height: 399px;
+		@include adaptive-value('min-height', 399, 373, 1400, 768, 1);
+		@include adaptive-value('min-height', 373, 290, 768, 375, 1);
 	}
 
 	&__navigation {
@@ -230,10 +230,13 @@
 	
 	&__title {
 	}
+
 	&__content-box {
+
 	}
 
 	&__swiper {
+
 	}
 
 	&__page-change-button {
@@ -250,35 +253,42 @@
 
 .release-swiper {
 	position: relative;
-	margin: 32px -12px 28px !important;
-	@media (max-width: em($breakpoint768)) {
-		margin: 28px -12px 24px !important;
-	}
-	@media (max-width: em($breakpoint375)) {
-		margin: 24px -5px 20px !important;
-	}
+	// margin: 32px -12px 28px !important;
+	// @media (max-width: em($breakpoint768)) {
+	// 	margin: 28px -12px 24px !important;
+	// }
+	// @media (max-width: em($breakpoint375)) {
+	// 	margin: 24px -5px 20px !important;
+	// }
 	&__items {
 		display: flex;
-		@media (max-width: em($breakpoint768)) {
-			margin-left: -8.1%;
-		}
-		@media (max-width: em($breakpoint375)) {
-			margin-left: -16%;
-		}
+		margin: 0 -12px;
+		// display: flex;
+		// @media (max-width: em($breakpoint768)) {
+		// 	margin-left: -8.1%;
+		// }
+		// @media (max-width: em($breakpoint375)) {
+		// 	margin-left: -16%;
+		// }
 	}
 
 	&__releases-item {
-		max-height: 176px;
 		flex: 0 1 16.6667%;
+		max-width: calc(176px + 24px);
+		max-height: calc(176px + 24px);
+		height: auto;
 		padding: 0 12px;
-		@media (max-width: em($breakpoint768)) {
-			flex: 0 0 23.3%;
-			max-height: 160px;
-		}
-		@media (max-width: em($breakpoint375)) {
-			flex: 0 0 44.5%;
-			padding: 0 5px;
-		}
+		// max-height: 176px;
+		// flex: 0 1 16.6667%;
+		// padding: 0 12px;
+		// @media (max-width: em($breakpoint768)) {
+		// 	flex: 0 0 23.3%;
+		// 	max-height: 160px;
+		// }
+		// @media (max-width: em($breakpoint375)) {
+		// 	flex: 0 0 44.5%;
+		// 	padding: 0 5px;
+		// }
 	}
 
 	&__navigation {

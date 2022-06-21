@@ -630,6 +630,7 @@ body.lock {
   position: relative;
   display: flex;
   flex-direction: column;
+  row-gap: 20px;
   border-radius: 10px;
   padding: 12px 12px 16px;
 }
@@ -706,6 +707,7 @@ body.lock {
   flex-direction: column;
   flex: 0 0 68px;
   justify-content: space-between;
+  row-gap: 8px;
 }
 @media (max-width: 47.99875em) {
   .merch-card__footer {
@@ -764,37 +766,39 @@ body.lock {
 }
 .release-item {
   position: relative;
-  height: auto;
+}
+.release-item:hover .release-item__mask {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.release-item__mask {
+  position: absolute;
+  width: calc(100% - 24px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
 }
 .release-item__content {
   position: absolute;
-  bottom: 20px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.7);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.release-item__image {
   width: 100%;
   height: 100%;
-}
-.release-item__content-name {
-  font-family: "Albertus Nova";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #FFFFFF;
-}
-.release-item__content-year {
-  margin-bottom: 30px;
-  font-family: "Noto Sans";
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 27px;
-  color: #FFFFFF;
-}
-.release-item img {
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -1193,28 +1197,29 @@ body.lock {
   }
 }
 .merch-swiper__card {
-  height: 399px;
+  height: 100% !important;
+  min-height: 399px;
 }
 @media (max-width: 768px) {
   .merch-swiper__card {
-    height: 373px;
+    min-height: 373px;
   }
 }
 @media (max-width: 1400px) and (min-width: 768px) {
   .merch-swiper__card {
-    height: calc(
+    min-height: calc(
 					373px + 26 * ((100vw - 768px) / 632)
 			);
   }
 }
 @media (max-width: 375px) {
   .merch-swiper__card {
-    height: 290px;
+    min-height: 290px;
   }
 }
 @media (max-width: 768px) and (min-width: 375px) {
   .merch-swiper__card {
-    height: calc(
+    min-height: calc(
 					290px + 83 * ((100vw - 375px) / 393)
 			);
   }
@@ -1253,47 +1258,17 @@ body.lock {
 
 .release-swiper {
   position: relative;
-  margin: 32px -12px 28px !important;
-}
-@media (max-width: 47.99875em) {
-  .release-swiper {
-    margin: 28px -12px 24px !important;
-  }
-}
-@media (max-width: 23.43625em) {
-  .release-swiper {
-    margin: 24px -5px 20px !important;
-  }
 }
 .release-swiper__items {
   display: flex;
-}
-@media (max-width: 47.99875em) {
-  .release-swiper__items {
-    margin-left: -8.1%;
-  }
-}
-@media (max-width: 23.43625em) {
-  .release-swiper__items {
-    margin-left: -16%;
-  }
+  margin: 0 -12px;
 }
 .release-swiper__releases-item {
-  max-height: 176px;
   flex: 0 1 16.6667%;
+  max-width: 200px;
+  max-height: 200px;
+  height: auto;
   padding: 0 12px;
-}
-@media (max-width: 47.99875em) {
-  .release-swiper__releases-item {
-    flex: 0 0 23.3%;
-    max-height: 160px;
-  }
-}
-@media (max-width: 23.43625em) {
-  .release-swiper__releases-item {
-    flex: 0 0 44.5%;
-    padding: 0 5px;
-  }
 }
 .release-swiper__navigation {
   display: none;
