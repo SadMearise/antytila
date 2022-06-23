@@ -103,6 +103,11 @@ body {
 }
 
 .vertical-indent {
+	&--xxs {
+		padding-top: 24px;
+		padding-bottom: 20px;
+	}
+
 	&--xs {
 		padding-top: 32px !important;
 		padding-bottom: 28px !important;
@@ -122,6 +127,14 @@ body {
 	&--m {
 		padding-top: 48px;
 		padding-bottom: 48px;
+		@media (max-width: em($breakpoint768)) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			padding-top: 36px;
+			padding-bottom: 36px;
+		}
 	}
 	&--l {
 		padding-top: 0px;
