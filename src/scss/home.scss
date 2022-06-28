@@ -101,9 +101,11 @@
 	&__content-box-photo {
 		flex-shrink: 1;
 		flex-basis: 334px;
+		
 		img {
 			width: 100%;
 			height: auto;
+			max-height: 334px;
 			border-radius: 10px;
 		}
 		@media (max-width: em($breakpoint768)) {
@@ -116,6 +118,7 @@
 	}
 
 	&__content-box-info {
+		max-width: 300px;
 	}
 
 	&__info-title {
@@ -202,6 +205,7 @@
 		position: absolute;
 		top: 130px !important;
 		left: 22px !important;
+		margin: 0 !important;
 		@media (max-width: em($breakpoint375)) {
 			top: 110px !important;
 		}
@@ -211,6 +215,7 @@
 		position: absolute;
 		top: 130px !important;
 		right: 22px !important;
+		margin: 0 !important;
 		@media (max-width: em($breakpoint375)) {
 			top: 110px !important;
 		}
@@ -582,9 +587,10 @@
 
 	&__right-side-text {
 		max-width: 297px;
-		margin: 0 auto 21px;
+		margin-bottom: 21px;
 		@media (max-width: em($breakpoint768)) {
 			text-align: center;
+			margin: 0 auto 21px;
 		}
 	}
 

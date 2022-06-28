@@ -1375,6 +1375,7 @@ body.lock {
 .youtube__content-box-photo img {
   width: 100%;
   height: auto;
+  max-height: 334px;
   border-radius: 10px;
 }
 @media (max-width: 47.99875em) {
@@ -1386,6 +1387,9 @@ body.lock {
   .youtube__content-box-photo {
     flex-basis: 160px;
   }
+}
+.youtube__content-box-info {
+  max-width: 300px;
 }
 .youtube__info-title {
   margin-bottom: 1px;
@@ -1479,6 +1483,7 @@ body.lock {
   position: absolute;
   top: 130px !important;
   left: 22px !important;
+  margin: 0 !important;
 }
 @media (max-width: 23.43625em) {
   .merch-swiper__button-prev {
@@ -1489,6 +1494,7 @@ body.lock {
   position: absolute;
   top: 130px !important;
   right: 22px !important;
+  margin: 0 !important;
 }
 @media (max-width: 23.43625em) {
   .merch-swiper__button-next {
@@ -1828,11 +1834,12 @@ body.lock {
 }
 .community__right-side-text {
   max-width: 297px;
-  margin: 0 auto 21px;
+  margin-bottom: 21px;
 }
 @media (max-width: 47.99875em) {
   .community__right-side-text {
     text-align: center;
+    margin: 0 auto 21px;
   }
 }
 .community__right-side-socials {
