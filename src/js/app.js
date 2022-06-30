@@ -6,3 +6,4 @@ flsFunctions.isWebp();
 flsFunctions.ibg();
 flsFunctions.toggleClassActive();
 flsFunctions.addVideo();
+flsFunctions.closeMenu();

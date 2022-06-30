@@ -595,6 +595,11 @@ body._lock {
   column-gap: 24px;
 }
 .socials__social {
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   display: block;
   max-width: 24px;
   max-height: 24px;
@@ -607,6 +612,14 @@ body._lock {
 .socials__social svg use {
   width: 100%;
   height: auto;
+}
+.socials__social:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
 }
 
 .main-screen {
@@ -1002,21 +1015,11 @@ body._lock {
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  z-index: 101;
-}
-.release-item:hover__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 101;
-  background-color: transparent;
 }
 .release-item__mask {
   display: block;
   position: absolute;
-  z-index: 100;
+  z-index: 50;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
@@ -2005,4 +2008,31 @@ body._lock {
 }
 .footer__copy {
   text-align: center;
+}
+
+.releases__title {
+  margin-bottom: 4px;
+}
+.releases__navigation {
+  margin-bottom: 32px;
+}
+.releases__releases-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+.releases__releases-item-container {
+  padding: 12px;
+  flex: 0 1 25%;
+}
+.navigation-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation-list__item {
+  cursor: pointer;
+}
+.navigation-list__item + .navigation-list__item {
+  margin-left: 24px;
 }

@@ -1,15 +1,26 @@
 .releases {
 
 	&__title {
+		margin-bottom: 4px;
 	}
 
 	&__navigation {
+		margin-bottom: 32px;
 	}
-
+	
 	&__navigation-list {
 	}
-
+	
 	&__releases-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -12px;
+	}
+
+	&__releases-item-container {
+		padding: 12px;
+		flex: 0 1 25%;
+
 	}
 
 	&__releases-item {
@@ -18,10 +29,12 @@
 
 .navigation-list {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	&__item {
+		cursor: pointer;
 		& + & {
 			margin-left: 24px;
 		}
 	}
 }
-

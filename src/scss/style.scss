@@ -58,6 +58,7 @@ body {
 	font-weight: $fw-400;
 	&._lock {
 		overflow: hidden;
+		
 	}
 }
 
@@ -187,6 +188,7 @@ body {
 @import "header";
 @import "home";
 @import "footer";
+@import "releases";
 
 // Основные элементы
 // Пример: 

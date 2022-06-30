@@ -28,7 +28,6 @@ export function toggleClassActive() {
 			document.querySelector('.icon-menu').classList.toggle('_active')
 			document.querySelector('.header__menu').classList.toggle('_active')
 			document.querySelector('.menu__patch').classList.toggle('_active')
-			document.querySelector('body').classList.toggle('_lock')
 		})
 	}
 }
@@ -49,5 +48,16 @@ export function addVideo() {
 			})
 		})
 
+	})
+}
+
+export function closeMenu() {
+	document.addEventListener('scroll', function(event) {
+		const activeMenu = document.querySelector('._active');
+		if (activeMenu && event.target == document) {
+			document.querySelector('.icon-menu').classList.toggle('_active');
+			document.querySelector('.header__menu').classList.toggle('_active');
+			document.querySelector('.menu__patch').classList.toggle('_active');
+		}
 	})
 }
