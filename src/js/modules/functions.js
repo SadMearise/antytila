@@ -28,6 +28,7 @@ export function toggleClassActive() {
 			document.querySelector('.icon-menu').classList.toggle('_active')
 			document.querySelector('.header__menu').classList.toggle('_active')
 			document.querySelector('.menu__patch').classList.toggle('_active')
+			document.querySelector('body').classList.toggle('_lock')
 		})
 	}
 }

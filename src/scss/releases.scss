@@ -1,0 +1,27 @@
+.releases {
+
+	&__title {
+	}
+
+	&__navigation {
+	}
+
+	&__navigation-list {
+	}
+
+	&__releases-list {
+	}
+
+	&__releases-item {
+	}
+}
+
+.navigation-list {
+	display: flex;
+	&__item {
+		& + & {
+			margin-left: 24px;
+		}
+	}
+}
+

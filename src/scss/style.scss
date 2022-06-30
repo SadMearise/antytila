@@ -56,7 +56,7 @@ body {
 	background-color: #FAFAFA;
 	color: $color-black;
 	font-weight: $fw-400;
-	&.lock {
+	&._lock {
 		overflow: hidden;
 	}
 }
@@ -101,13 +101,6 @@ body {
 		padding: 0;
 	}
 }
-
-// e 48 48 +
-// i 32 28 +
-
-
-
-
 
 .vertical-indent {
 	&--xxs {

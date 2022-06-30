@@ -303,6 +303,22 @@
 	color: #2D2D2D;
 }
 
+.text28 {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 23px;
+	color: #FFFFFF;
+}
+
+.text29 {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 23px;
+	color: #989898;
+}
+
 .socials {
 	display: flex;
 	column-gap: 24px;
@@ -338,7 +354,6 @@
 	}
 	
 	&__mini-logo {
-		
 	}
 
 	&__mini-logo-link {
@@ -432,6 +447,9 @@
 	@include adaptive-value("height", 266, 130, 768, 375, 1);
 	@media (max-width: em($breakpoint1400)) {
 		object-fit: contain;
+	}
+	@media (max-width: em($breakpoint375)) {
+		object-fit: cover;
 	}
 }
 
@@ -543,10 +561,12 @@
 		.release-item__mask {
 			opacity: 1;
 			@include anim(.3s, 0s);
-		}
 	}
+	
 	&__mask {
+		display: block;
 		position: absolute;
+		z-index: 100;
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.7);
@@ -561,7 +581,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		
 	}
 
 	&__content-name {
@@ -570,11 +589,23 @@
 	&__content-year {
 	}
 
-	&__image {
-		width: 100%;
-		height: 100%;
-		border-radius: 10px;
-		object-fit: cover;
+	&__content-text {
+	}
+
+	&__content-socials {
+	}
+
+	&__image {	
+		display: block;
+		position: relative;
+		padding-bottom: 100%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
 	}
 }
 
@@ -587,6 +618,7 @@
 		width: 100%;
 		height: 100%;
 		border-radius: 10px;
+		object-fit: cover;
 	}
 
 	&__text {
