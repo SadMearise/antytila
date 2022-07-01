@@ -14,6 +14,10 @@
 // }
 // <label for="email" class="visually-hidden">Email:</label>
 // <input id="email" type="text" class="form__input" placeholder="Email address">
+.hide {
+	display: none;
+}
+
 .tac {
 	text-align: center;
 }
@@ -319,6 +323,30 @@
 	color: #989898;
 }
 
+.text30 {
+	font-family: 'Albertus Nova';
+	font-weight: 400;
+	font-size: 30px;
+	color: #FFFFFF;
+	line-height: 42px;
+	@media (max-width: em($breakpoint768)) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+.text31 {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27px;
+	color: #FFFFFF;
+	@media (max-width: em($breakpoint768)) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
 .socials {
 	display: flex;
 	column-gap: 24px;
@@ -585,8 +613,14 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
 		text-align: center;
+		@media (max-width: em($breakpoint768)) {
+			top: 20px;
+			transform: translateX(-50%);
+		}
+		@media (min-width: em($breakpoint768)) {
+			transform: translate(-50%, -50%);
+		}
 	}
 
 	&__content-name {
@@ -595,13 +629,25 @@
 	&__content-year {
 	}
 
+	&__content-bottom {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
 	&__content-text {
+		white-space: nowrap;
+		margin-bottom: 7px;
+		@media (max-width: em($breakpoint480)) {
+			display: none;
+		}
 	}
 
 	&__content-socials {
-		.socials__social {
-			
-		}
+		align-items: center;
+		justify-content: center;
+		column-gap: 8px;
 	}
 
 	&__image {	

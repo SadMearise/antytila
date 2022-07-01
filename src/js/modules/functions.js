@@ -61,3 +61,24 @@ export function closeMenu() {
 		}
 	})
 }
+
+export function filterReleases() {
+	const filterBox = document.querySelectorAll('.releases__releases-item-container');
+	const navItems = document.querySelectorAll('.navigation-list__item');
+	document.querySelector('.releases__navigation').addEventListener('click', event => {
+		if (event.target.tagName !== 'LI') return false;
+		let filterData = event.target.dataset.filter;
+
+		navItems.forEach(elem => {
+			elem.classList.remove('_nav-active');
+		})
+		event.target.classList.add('_nav-active');
+
+		filterBox.forEach(elem => {
+			elem.classList.remove('hide');
+			if (!elem.classList.contains(filterData) && filterData !== 'all') {
+				elem.classList.add('hide')
+			}
+		})
+	})
+}

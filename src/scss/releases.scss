@@ -6,6 +6,12 @@
 
 	&__navigation {
 		margin-bottom: 32px;
+		@media (max-width: em($breakpoint768)) {
+			margin-bottom: 28px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			margin-bottom: 24px;
+		}
 	}
 	
 	&__navigation-list {
@@ -14,13 +20,19 @@
 	&__releases-list {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -12px;
+		margin: -12px;
+		min-height: 900px;
 	}
 
 	&__releases-item-container {
 		padding: 12px;
 		flex: 0 1 25%;
-
+		@media (max-width: em($breakpoint992)) {
+			flex-basis: 33.333%;
+		}
+		@media (max-width: em($breakpoint576)) {
+			flex-basis: 50%;
+		}
 	}
 
 	&__releases-item {
@@ -31,10 +43,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px;
 	&__item {
 		cursor: pointer;
-		& + & {
-			margin-left: 24px;
-		}
+	}
+	._nav-active {
+		color: #2D2D2D;
 	}
 }

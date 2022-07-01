@@ -7,3 +7,4 @@ flsFunctions.ibg();
 flsFunctions.toggleClassActive();
 flsFunctions.addVideo();
 flsFunctions.closeMenu();
+flsFunctions.filterReleases();
