@@ -84,7 +84,6 @@
 		width: 408px;
 		padding: 90px 60px;
 		background-color: $color-white;
-		outline: 1px solid $color-black;
 		
 		transform: translate3d(-100%, 0, 0);
 		@include anim(.3s, 0s);

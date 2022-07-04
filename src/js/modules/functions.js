@@ -34,7 +34,7 @@ export function toggleClassActive() {
 
 export function addVideo() {
 	window.addEventListener('DOMContentLoaded', function() {
-		const videos = document.querySelectorAll('.video__video');
+		const videos = document.querySelectorAll('.video-block__video');
 		
 		videos.forEach(function(video) {
 			video.addEventListener('click', function() {
