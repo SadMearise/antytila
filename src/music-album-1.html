@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Home Page"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html', {})
+		<main class="page">
+			<!-- section-main-screen -->
+			<section class="main-screen">
+				<h1 class="main-screen__mini-logo">
+					<a class="main-screen__mini-logo-link" href="index.html">
+						<img src="./img/main-screen/mini-logo.png" alt="">
+					</a>
+				</h1>
+				<div class="main-screen__mask"></div>
+				<img class="main-screen__bg bg-position" src="./img/main-screen/bg2.jpg" alt="background">
+			</section>
+			<div class="container-page container vertical-indent vertical-indent--l">
+				<section class="container-page__music"></section>
+				<section class="container-page__about"></section>
+				<!-- section-release -->
+				<section class="container-page__releases release">
+					<h3 class="release__text-header text33">Останні релізи:</h3>
+					<div class="release__content-box">
+						<div class="release__swiper release-swiper swiper">
+							<div class="release-swiper__items swiper-wrapper">
+								<div class="release-swiper__container-item swiper-slide">
+									<div class="release-swiper__item release-item">
+										<a href="#" class="release-item__mask">
+											<div class="release-item__content">
+												<div class="release-item__content-name text18">HELLO</div>
+												<div class="release-item__content-year text19">(2019)</div>
+											</div>
+										</a>
+										<div class="release-item__image">
+											<img src="./img/releases/1.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="release-swiper__container-item swiper-slide">
+									<div class="release-swiper__item release-item">
+										<a href="#" class="release-item__mask">
+											<div class="release-item__content">
+												<div class="release-item__content-name text18">HELLO</div>
+												<div class="release-item__content-year text19">(2019)</div>
+											</div>
+										</a>
+										<div class="release-item__image">
+											<img src="./img/releases/2.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="release-swiper__container-item swiper-slide">
+									<div class="release-swiper__item release-item">
+										<a href="#" class="release-item__mask">
+											<div class="release-item__content">
+												<div class="release-item__content-name text18">HELLO</div>
+												<div class="release-item__content-year text19">(2019)</div>
+											</div>
+										</a>
+										<div class="release-item__image">
+											<img src="./img/releases/3.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="release-swiper__container-item swiper-slide">
+									<div class="release-swiper__item release-item">
+										<a href="#" class="release-item__mask">
+											<div class="release-item__content">
+												<div class="release-item__content-name text18">HELLO</div>
+												<div class="release-item__content-year text19">(2019)</div>
+											</div>
+										</a>
+										<div class="release-item__image">
+											<img src="./img/releases/4.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="release-swiper__container-item swiper-slide">
+									<div class="release-swiper__item release-item">
+										<a href="#" class="release-item__mask">
+											<div class="release-item__content">
+												<div class="release-item__content-name text18">HELLO</div>
+												<div class="release-item__content-year text19">(2019)</div>
+											</div>
+										</a>
+										<div class="release-item__image">
+											<img src="./img/releases/5.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="release-swiper__container-item swiper-slide">
+									<div class="release-swiper__item release-item">
+										<a href="#" class="release-item__mask">
+											<div class="release-item__content">
+												<div class="release-item__content-name text18">HELLO</div>
+												<div class="release-item__content-year text19">(2019)</div>
+											</div>
+										</a>
+										<div class="release-item__image">
+											<img src="./img/releases/6.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="release-swiper__navigation">
+								<div class="release-swiper__button-prev nav-button nav-button--prev swiper-button-prev">
+								</div>
+								<div class="release-swiper__button-next nav-button nav-button--next swiper-button-next">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- / section-release -->
+			</div>
+			<!-- / section-main-screen -->
+
+			<!-- section-album -->
+
+			<!-- / section-album -->
+		</main>
+		@@include('html/footer.html', {})
+
+	</div>
+	@@include('_js.html', {})
+</body>
+
+</html>

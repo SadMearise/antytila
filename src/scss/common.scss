@@ -15,7 +15,7 @@
 // <label for="email" class="visually-hidden">Email:</label>
 // <input id="email" type="text" class="form__input" placeholder="Email address">
 .hide {
-	display: none;
+	display: block;
 }
 
 .reverse {
@@ -397,11 +397,6 @@
 	font-size: 20px;
 	line-height: 27px;
 	color: #FFFFFF;
-	@media (max-width: em($breakpoint375)) {
-		font-size: 14px;
-		line-height: 21px;
-		color: #2D2D2D;
-	}
 }
 
 .text38 {
@@ -410,13 +405,6 @@
 	font-size: 14px;
 	line-height: 21px;
 	color: #FFFFFF;
-	@media (max-width: em($breakpoint375)) {
-		font-family: 'Open Sans';
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 21px;
-		color: #2D2D2D;
-	}
 }
 
 .socials {
@@ -662,6 +650,68 @@
 	}
 }
 
+.release {
+	@media (max-width: em($breakpoint768)) {
+		.container {
+			max-width: none;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&__text-header {
+		margin-bottom: 24px;
+	}
+	
+	&__swiper {
+	}
+}
+
+.release-swiper {
+	margin: 0 -12px !important;
+	&__items {
+		display: flex;
+		width: auto !important;
+	}
+
+	&__container-item {
+		padding: 0 12px;
+		flex: 0 1 16.667%;
+		@media (max-width: em($breakpoint768)) {
+			flex: 0 0 23.25%;
+		}
+		@media (max-width: em($breakpoint375)) {
+			flex: 0 0 44.5%;
+			padding: 0 5px;
+		}
+	}
+
+	&__item {
+		height: 100%;
+	}
+
+	&__navigation {
+		display: none;
+		@media (max-width: em($breakpoint768)) {
+			display: block;
+		}
+	}
+
+	&__button-prev {
+		position: absolute;
+		left: 22px !important;
+		margin: 0 !important;
+		transform: translateY(-50%) rotate(180deg);
+	}
+
+	&__button-next {
+		position: absolute;
+		right: 22px !important;
+		margin: 0 !important;
+		transform: translateY(-50%);
+	}
+}
+
 .release-item {
 	position: relative;
 	&:hover {
@@ -807,6 +857,10 @@
 			@include anim(.8s, 0s);
 		}
 	}
+
+	&__bg {
+	}
+
 	&__photo {
 		position: absolute;
 		top: 0;
@@ -819,7 +873,18 @@
 		will-change: transform;
 	}
 
-	&__text {
+	&__image-info {
+	}
+
+	&__count-link {
+		position: absolute;
+		right: 16px;
+		top: 16px;
+		@include adaptive-value('right', 16, 8, 992, 375, 1);
+		@include adaptive-value('top', 16, 8, 992, 375, 1);
+	}
+
+	&__link-bottom {
 		position: absolute;
 		left: 50%;
 		bottom: 0px;
@@ -828,6 +893,36 @@
 		max-width: 255px;
 		padding: 16px;
 		width: 100%;
+		@include adaptive-value('padding', 16, 8, 992, 375, 1);
+	}
+
+	&__photo-text {
+	}
+
+}
+
+.photos-count {
+	text-align: center;
+	@media (max-width: em($breakpoint480)) {
+		display: flex;
+		align-items: center;
+		column-gap: 4px;
+	}
+	&__count {
+		@media (max-width: em($breakpoint480)) {
+			font-size: 14px;
+			line-height: 21px;
+			color: #2D2D2D;
+			font-weight: 400;
+		}
+	}
+
+	&__text {
+		@media (max-width: em($breakpoint480)) {
+			font-size: 14px;
+			line-height: 21px;
+			color: #2D2D2D;
+		}
 	}
 }
 
