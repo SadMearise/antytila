@@ -333,6 +333,7 @@
 	font-size: 30px;
 	color: #FFFFFF;
 	line-height: 42px;
+	text-transform: uppercase;
 	@media (max-width: em($breakpoint768)) {
 		font-size: 24px;
 		line-height: 32px;
@@ -405,6 +406,14 @@
 	font-size: 14px;
 	line-height: 21px;
 	color: #FFFFFF;
+}
+
+.text39 {		
+	font-family: 'Albertus Nova';
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 42px;
+	color: #2D2D2D;
 }
 
 .socials {
@@ -661,6 +670,14 @@
 
 	&__text-header {
 		margin-bottom: 24px;
+		@media (max-width: em($breakpoint768)) {
+			padding-left: 28px;
+			padding-right: 28px;
+		}
+		@media (max-width: em($breakpoint375)) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 	
 	&__swiper {

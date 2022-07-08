@@ -1,0 +1,106 @@
+.container-page {
+
+	&__content {
+	}
+}
+
+.album {
+	display: flex;
+	flex-direction: column;
+	@media (min-width: em($breakpoint768)) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	&__name {
+		text-transform: uppercase;
+		margin-bottom: 8px;
+		@media (min-width: em($breakpoint768)) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__socials {
+		margin-bottom: 16px;
+		column-gap: 16px;
+		justify-content: center;
+		.socials__social {
+			max-width: 32px;
+			max-height: 32px;
+		}
+		svg {
+			max-width: 32px;
+			max-height: 32px;
+			fill: $color-black;
+		}
+		@media (min-width: em($breakpoint768)) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__audio-block {
+		margin-bottom: 24px;
+		@media (min-width: em($breakpoint768)) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__audio-list {
+		@media (min-width: em($breakpoint768)) {
+			flex: 0 1 50%;
+		}
+	}
+	&__album-img-container {
+		
+		@media (min-width: em($breakpoint768)) {
+			flex: 0 1 50%;
+			order: 1;
+			text-align: right;
+		}
+	}
+
+	&__album-img {
+		max-width: 80.955%;
+		padding-top: 80.955%;
+		border-radius: 10px;
+		object-fit: cover;
+		margin-left: auto;
+		@media (max-width: em($breakpoint768)) {
+			margin: 0 auto;
+			max-width: 100%;
+			padding-top: 100%;
+		}
+	}
+
+	&__about-title {
+		margin-top: 48px;
+		margin-bottom: 32px;
+		@media (min-width: em($breakpoint768)) {
+			flex: 0 0 100%;
+			order: 2;
+		}
+	}
+
+	&__text-block {
+		margin: 0 -12px 48px;
+		@media (min-width: em($breakpoint768)) {
+			display: flex;
+			order: 3;
+		}
+	}
+
+	&__text-block-column {
+		flex: 0 1 50%;
+		padding: 0 12px;
+		p {
+			margin-bottom: 23px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@media (max-width: em($breakpoint768)) {
+			& + & {
+				margin-top: 23px;
+			}
+		}
+	}
+}

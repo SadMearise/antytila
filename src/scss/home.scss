@@ -585,8 +585,10 @@
 	}
 
 	&__social {
-		max-width: 32px;
-		max-height: 32px;
+		.socials__social {
+			max-width: 32px;
+			max-height: 32px;
+		}
 		svg {
 			max-width: 32px;
 			max-height: 32px;

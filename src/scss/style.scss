@@ -101,6 +101,12 @@ body {
 		max-width: 1440px;
 		padding: 0;
 	}
+
+	&--small {
+		@media (max-width: em($breakpoint768)) {
+			max-width: (528 + $containerPadding) + px;
+		}
+	}
 }
 
 .vertical-indent {
@@ -192,6 +198,7 @@ body {
 @import "releases";
 @import "members";
 @import "photos";
+@import "music-album";
 
 // Основные элементы
 // Пример: 
