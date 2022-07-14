@@ -102,6 +102,13 @@ body {
 		padding: 0;
 	}
 
+	&--medium {
+		max-width: (576 + $containerPadding) + px;
+		@media (max-width: em($breakpoint768)) {
+			max-width: (528 + $containerPadding) + px;
+		}
+	}
+
 	&--small {
 		@media (max-width: em($breakpoint768)) {
 			max-width: (528 + $containerPadding) + px;

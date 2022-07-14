@@ -167,6 +167,14 @@ body._lock {
   max-width: 1440px;
   padding: 0;
 }
+.container--medium {
+  max-width: 616px;
+}
+@media (max-width: 47.99875em) {
+  .container--medium {
+    max-width: 568px;
+  }
+}
 @media (max-width: 47.99875em) {
   .container--small {
     max-width: 568px;
@@ -239,14 +247,13 @@ body._lock {
   display: none;
 }
 
-@keyframes filterAnimation {
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+  }
   to {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    padding: 0 !important;
-    margin: 0;
-    flex: 0 0 0% !important;
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 .hide {
@@ -758,6 +765,22 @@ body._lock {
   color: #2D2D2D;
 }
 
+.text46 {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #989898;
+}
+
+.text47 {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #2D2D2D;
+}
+
 .socials {
   display: flex;
   column-gap: 24px;
@@ -985,7 +1008,7 @@ body._lock {
   z-index: 100;
   bottom: 43px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -75%);
   width: 22px;
   height: 22px;
   border: 2px solid #FFFFFF;
@@ -993,6 +1016,7 @@ body._lock {
   background-color: transparent;
   box-sizing: content-box;
   cursor: pointer;
+  animation: fadeInDown 3s infinite;
 }
 .main-screen__icon::after {
   content: "";
@@ -1506,6 +1530,65 @@ body._lock {
   }
 }
 
+.novelties {
+  position: relative;
+}
+.novelties__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.novelties__text-header {
+  margin-bottom: 24px;
+}
+@media (max-width: 47.99875em) {
+  .novelties__text-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+@media (max-width: 23.43625em) {
+  .novelties__text-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.novelties__container {
+  position: relative;
+  z-index: 1;
+}
+.novelties__items {
+  display: flex;
+}
+@media (max-width: 23.43625em) {
+  .novelties__items {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}
+@media (min-width: 23.43625em) {
+  .novelties__items {
+    margin: 0 -12px;
+  }
+}
+.novelties__item {
+  flex: 0 1 25%;
+}
+@media (max-width: 47.99875em) {
+  .novelties__item {
+    flex-basis: 50%;
+  }
+  .novelties__item:nth-child(3), .novelties__item:nth-child(4) {
+    display: none;
+  }
+}
+@media (min-width: 23.43625em) {
+  .novelties__item {
+    padding: 0 12px;
+  }
+}
 .novelties-item {
   display: flex;
   flex-direction: column;
@@ -2070,50 +2153,6 @@ body._lock {
   }
   .photo__gallery-item:nth-child(1) {
     padding-top: 59.4%;
-  }
-}
-.novelties {
-  position: relative;
-}
-.novelties__bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.novelties__container {
-  position: relative;
-  z-index: 1;
-}
-.novelties__items {
-  display: flex;
-}
-@media (max-width: 23.43625em) {
-  .novelties__items {
-    flex-direction: column;
-    row-gap: 24px;
-  }
-}
-@media (min-width: 23.43625em) {
-  .novelties__items {
-    margin: 0 -12px;
-  }
-}
-.novelties__item {
-  flex: 0 1 25%;
-}
-@media (max-width: 47.99875em) {
-  .novelties__item {
-    flex-basis: 50%;
-  }
-  .novelties__item:nth-child(3), .novelties__item:nth-child(4) {
-    display: none;
-  }
-}
-@media (min-width: 23.43625em) {
-  .novelties__item {
-    padding: 0 12px;
   }
 }
 .instagram__gallery {
@@ -3003,4 +3042,35 @@ body._lock {
 .pagination__link {
   display: block;
   color: inherit;
+}
+
+.novelty-container__novelties .novelties__text-header {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (max-width: 47.99875em) and (min-width: 23.43625em) {
+  .novelty__pub-date {
+    margin-bottom: 4px;
+  }
+}
+.novelty__article-item {
+  margin-bottom: 16px;
+}
+.novelty__article-item:last-child {
+  margin-bottom: 0;
+}
+.novelty__socials {
+  padding-top: 16px;
+  border-top: 1px solid #E0E0E0;
+  justify-content: center;
+  column-gap: 18px;
+}
+.novelty__socials svg {
+  fill: #2D2D2D;
+}
+.novelty__image {
+  width: 100%;
+  padding-top: 58.16%;
+  border-radius: 10px;
 }

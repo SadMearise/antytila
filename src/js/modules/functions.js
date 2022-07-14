@@ -83,3 +83,23 @@ export function filterReleases() {
 	})
 }
 
+
+export function scrollToElement(anchors, pageName) {
+	anchors.forEach(function (item) {
+		if (item && document.URL.includes(pageName)) {
+			console.log(item);
+			item.addEventListener("click", function (e) {
+				e.preventDefault();
+				
+				let coordY = document
+					.querySelector(item.getAttribute("href").slice(item.getAttribute("href").lastIndexOf('#')))
+					.getBoundingClientRect().top;
+
+				window.scrollBy({
+					top: coordY,
+					behavior : "smooth"
+				});
+			});
+		}
+	});
+}
