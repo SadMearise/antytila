@@ -15,7 +15,7 @@
 // <label for="email" class="visually-hidden">Email:</label>
 // <input id="email" type="text" class="form__input" placeholder="Email address">
 .hide {
-	display: block;
+	display: none;
 }
 
 .color-gray-200 {
@@ -518,6 +518,9 @@
 	display: flex;
 	column-gap: 8px;
 	&__item {
+		&:active {
+			transform: scale(0.9);
+		}
 		display: block;
 		max-width: 24px;
 		max-height: 24px;

@@ -172,9 +172,10 @@
 .audio-progress {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	width: 100%;
 	column-gap: 12px;
-	&__start-time {
+	&__current-time {
 	}
 
 	&__line-container {
@@ -182,20 +183,29 @@
 		height: 12px;
 	}
 
-	&__end-time {
+	&__max-time {
 	}
 }
 
 .progress-bar {
 	position: relative;
-	height: 3px;
-	background-color: $color-gray-200;
+	cursor: pointer;
+	height: 12px;
+	max-width: 680px;
+	&__main-line {
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background-color: $color-gray-200;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 	&__red-line {
 		position: absolute;
-		width: 40%;
 		background-color: $color-red;
-		height: 100%;
-		top: 0;
+		height: 3px;
+		top: 50%;
+		transform: translateY(-50%);
 		left: 0;
 		&::after {
 			content: '';
