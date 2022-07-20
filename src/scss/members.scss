@@ -89,7 +89,7 @@
 	}
 
 	&__history-block-items {
-		border-left: 1px solid #E0E0E0;
+		border-left: 1px solid $color-gray-100;
 		margin-top: 32px;
 		@media (max-width: em($breakpoint768)) {
 			margin-top: 28px;
@@ -132,8 +132,8 @@
 			transform: translateY(-50%);
 			width: 15px;
 			height: 15px;
-			background: #FF1E00;
-			border: 3px solid #FAFAFA;
+			background: $color-red;
+			border: 3px solid $color-gray-50;
 			border-radius: 100%;
 		}
 	}

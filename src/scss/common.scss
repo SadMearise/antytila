@@ -1,21 +1,9 @@
 // Заголовки, общие БЭМ блоки и прочее
-
-// Accessibility for screen reader
-
-// .visually-hidden {
-// 	position: absolute;
-// 	width: 1px;
-// 	height: 1px;
-// 	margin: -1px;
-// 	padding: 0;
-// 	overflow: hidden;
-// 	border: 0;
-// 	clip: rect(0 0 0 0);
-// }
-// <label for="email" class="visually-hidden">Email:</label>
-// <input id="email" type="text" class="form__input" placeholder="Email address">
 .hide {
-	display: none;
+	
+	transition: opacity 1s ease 0s;
+	animation-name: hidden;
+	animation-duration: .3s;
 }
 
 .color-gray-200 {
@@ -45,14 +33,14 @@
 		width: 138px;
 		&:hover {
 			background-color: transparent;
-			border: 2px solid #2D2D2D;
+			border: 2px solid $color-black;
 			color: $color-black;
 		}
 	}
 	&--transparent {
 		background-color: transparent;
-		color: #2D2D2D;
-		border: 1px solid #2D2D2D;
+		color: $color-black;
+		border: 1px solid $color-black;
 		width: 138px;
 	}
 
@@ -70,7 +58,7 @@
 		width: 138px;
 	}
 	&--underline {
-		border-bottom: 1px solid #2D2D2D;
+		border-bottom: 1px solid $color-black;
 		border-radius: 0;
 		padding: 0px 0px 1px 0px;
 	}
@@ -78,410 +66,295 @@
 }
 
 .text1 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 14px;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-14;
 	line-height: math.div(20, 14);
 	color: $color-white;
 }
 
 .text2 {
-	font-family: 'Albertus Nova';
-	font-weight: 200;
-	font-size: 24px;
+	@include font-albertus-nova();
+	font-weight: $fw-200;
+	font-size: $fz-24;
 	line-height: math.div(33, 24);
 	color: $color-black;
 	@media (max-width: em($breakpoint375)) {
-		font-size: 20px;
+		font-size: $fz-20;
 		line-height: math.div(27, 20);
 	}
 }
 
 .text3 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 26px;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-26;
 	line-height: math.div(22, 26);
-	color: #2D2D2D;
+	color: $color-black;
 	@media (max-width: em($breakpoint375)) {
-		font-size: 24px;
+		font-size: $fz-24;
 		line-height: math.div(22, 24);
 	}
 }
 
 .text4 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 22px;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-22;
 	line-height: math.div(30, 20);
-	color: #2D2D2D;
+	color: $color-black;
 	@media (max-width: em($breakpoint375)) {
-		font-size: 20px;
+		font-size: $fz-20;
 		line-height: math.div(28, 20);
 	}
 }
 
 .text5 {
-	font-family: 'Albertus Nova';
-	font-weight: 200;
-	font-size: 16px;
+	@include font-albertus-nova();
+	font-weight: $fw-200;
+	font-size: $fz-16;
 	line-height: math.div(23, 16);
-	color: #2D2D2D;
+	color: $color-black;
 }
 
 .text6 {
-	font-family: 'Albertus Nova';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 30px;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-30;
 	line-height: math.div(32, 30);
-	color: #2D2D2D;
+	color: $color-black;
 	@media (max-width: em($breakpoint375)) {
-		font-size: 24px;
+		font-size: $fz-24;
 		line-height: math.div(33, 24);
 	}
 }
 
 .text7 {
-	font-family: 'Albertus Nova';
-	font-weight: 400; 
-	font-size: 16px;
+	@include font-albertus-nova();
+	font-weight: $fw-400; 
+	font-size: $fz-16;
 	line-height: math.div(22, 16);
-	color: #FFFFFF;
+	color: $color-white;
 }
 
 .text8 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 16px;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-16;
 	line-height: math.div(22, 16);
-	color: #2D2D2D;
+	color: $color-black;
 }
 
 .text9 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 18px;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-18;
 	line-height: math.div(25, 18);
-	color: #FF1E00;
+	color: $color-red;
 }
 
 .text10 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 16px;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-16;
 	line-height: math.div(22, 16);
-	color: #2D2D2D;
+	color: $color-black;
 }
 
 .text11 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 16px;
-	color: #FFFFFF;
+	font-weight: $fw-400;
+	font-size: $fz-12;
+	line-height: math.div(16, 12);
+	color: $color-white;
 }
 
 .text12 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 40px;
-	line-height: 55px;
-	color: #FFFFFF;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-40;
+	line-height: math.div(55, 40);
+	color: $color-white;
 
 	@include adaptive-value('font-size', 40, 24, 768, 375, 1);
 	@include adaptive-value('line-height', 55, 33, 768, 375, 1);
 }
 
 .text13 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 32px;
-	line-height: 44px;
-	color: #FFFFFF;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-32;
+	line-height: math.div(44, 32);
+	color: $color-white;
 	@include adaptive-value('font-size', 28, 20, 768, 375, 1);
 	@include adaptive-value('line-height', 39, 28, 768, 375, 1);
 }
 
 .text14 {
-	font-family: 'Albertus Nova';
-	font-weight: 200;
-	font-size: 14px;
-	line-height: 19px;
-	color: #2D2D2D;
+	@include font-albertus-nova();
+	font-weight: $fw-200;
+	font-size: $fz-14;
+	line-height: math.div(19, 14);
+	color: $color-black;
 }
 
 .text15 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
-	color: #2D2D2D;
+	@include font-circle-slab();
+	font-weight: $fw-500;
+	font-size: $fz-14;
+	line-height: math.div(15, 14);
+	color: $color-white;
 }
 
 .text16 {
-	font-family: 'Circe Slab C';
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 15px;
-	color: #FFFFFF;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-14;
+	line-height: math.div(19, 14);
+	color: $color-gray-200;
 }
 
 .text17 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 19px;
-	color: #989898;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-20;
+	line-height: math.div(28, 20);
+	color: $color-white;
 }
 
 .text18 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 28px;
-	color: #FFFFFF;
+	@include font-noto-sans();
+	font-weight: $fw-500;
+	font-size: $fz-20;
+	line-height: math.div(27, 20);
+	color: $color-white;
 }
 
 .text19 {
-	font-family: 'Noto Sans';
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 27px;
-	color: #FFFFFF;
+	font-weight: $fw-400;
+	font-size: $fz-16;
+	line-height: math.div(23, 16);
+	color: $color-white;
 }
 
 .text20 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #FFFFFF;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-12;
+	line-height: math.div(17, 12);
+	color: $color-black;
 }
 
 .text21 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 12px;
-	line-height: 17px;
-	color: #2D2D2D;
+	font-weight: $fw-400;
+	font-size: $fz-16;
+	line-height: math.div(23, 16);
+	color: $color-gray-200;
 }
 
 .text22 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 25px;
-	color: #2D2D2D;
+	@include font-albertus-nova();
+	font-weight: $fw-300;
+	font-size: $fz-18;
+	line-height: math.div(25, 18);
+	color: $color-black;
 }
 
 .text23 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
-	color: #2D2D2D;
+	font-weight: $fw-400;
+	font-size: $fz-14;
+	line-height: math.div(21, 14);
+	color: $color-black;
 }
 
 .text24 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 21px;
-	color: #2D2D2D;
+	font-weight: $fw-400;
+	font-size: $fz-12;
+	line-height: math.div(21, 12);
+	color: $color-black;
 }
 
 .text25 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
+	font-weight: $fw-400;
+	font-size: $fz-16;
+	line-height: math.div(23, 16);
+	color: $color-black;
 }
 
 .text26 {
-	font-family: 'Albertus Nova';
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 25px;
-	color: #2D2D2D;
+	@include font-noto-sans();
+	font-weight: $fw-500;
+	font-size: $fz-14;
+	line-height: math.div(21, 14);
+	color: $color-black;
 }
 
 .text27 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
+	font-weight: $fw-600;
+	font-size: $fz-16;
+	line-height: math.div(23, 16);
+	color: $color-black;
 }
 
 .text28 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #FFFFFF;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-30;
+	line-height: math.div(42, 30);
+	color: $color-black;
 }
 
 .text29 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #989898;
+	font-weight: $fw-600;
+	font-size: $fz-20;
+	line-height: math.div(27, 20);
+	color: $color-white;
 }
 
 .text30 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 30px;
-	color: #FFFFFF;
-	line-height: 42px;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-30;
+	color: $color-white;
+	line-height: math.div(42, 30);
 	text-transform: uppercase;
 	@media (max-width: em($breakpoint768)) {
-		font-size: 24px;
-		line-height: 32px;
+		font-size: $fz-24;
+		line-height: math.div(32, 24);
 	}
 }
 
 .text31 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 27px;
-	color: #FFFFFF;
+	font-weight: $fw-400;
+	font-size: $fz-20;
+	line-height: math.div(27, 20);
+	color: $color-white;
 	@media (max-width: em($breakpoint768)) {
-		font-size: 16px;
-		line-height: 20px;
+		font-size: $fz-16;
+		line-height: math.div(20, 16);
 	}
 }
 
 .text32 {
-	font-family: 'Circe Slab C';
-	font-weight: 500;
-	font-size: 32px;
-	line-height: 34px;
-	color: #2D2D2D;
+	@include font-circle-slab();
+	font-weight: $fw-500;
+	font-size: $fz-32;
+	line-height: math.div(34, 32);
+	color: $color-black;
 }
 
 .text33 {
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 28px;
-	color: #2D2D2D;
+	@include font-albertus-nova();
+	font-weight: $fw-400;
+	font-size: $fz-20;
+	line-height: math.div(28, 20);
+	color: $color-black;
 }
 
 .text34 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
-}
-
-.text35 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
-}
-
-.text36 {
-	font-family: 'Open Sans';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 23px;
-	color: #989898;
-}
-
-.text37 {
-	font-family: 'Open Sans';
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 27px;
-	color: #FFFFFF;
-}
-
-.text38 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
-	color: #FFFFFF;
-}
-
-.text39 {		
-	font-family: 'Albertus Nova';
-	font-weight: 400;
-	font-size: 30px;
-	line-height: 42px;
-	color: #2D2D2D;
-}
-
-.text40 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
-	color: #2D2D2D;
-}
-
-.text41 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
-}
-
-.text42 {
-	font-family: 'Open Sans';
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
-}
-
-.text43 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
-}
-
-.text44 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #989898;
-}
-
-.text45 {
-	font-family: 'Noto Sans';
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 21px;
-	color: #2D2D2D;
-}
-
-.text46 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
-	color: #989898;
-}
-
-.text47 {
-	font-family: 'Open Sans';
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 23px;
-	color: #2D2D2D;
+	font-weight: $fw-600;
+	font-size: $fz-20;
+	line-height: math.div(23, 20);
+	color: $color-gray-200;
 }
 
 .socials {
@@ -495,7 +368,7 @@
 		display: block;
 		max-width: 24px;
 		max-height: 24px;
-		
+		transform: scale(1.001);
 		svg {
 			max-width: 24px;
 			max-height: 24px;
@@ -710,7 +583,7 @@
 	&__discount {
 	}
 	@media (min-width: em($breakpoint375)) {
-		border: 1px solid #989898;
+		border: 1px solid $color-gray-200;
 	}
 }
 
@@ -954,6 +827,7 @@
 		border-radius: 10px;
 		@include anim(.8s, 0s);
 		will-change: transform;
+		transform: scale(1.001);
 	}
 }
 
@@ -981,6 +855,7 @@
 		object-fit: cover;
 		@include anim(.8s, 0s);
 		will-change: transform;
+		transform: scale(1.001);
 	}
 
 	&__image-info {
@@ -1020,18 +895,18 @@
 	}
 	&__count {
 		@media (max-width: em($breakpoint480)) {
-			font-size: 14px;
-			line-height: 21px;
-			color: #2D2D2D;
-			font-weight: 400;
+			font-size: $fz-14;
+			line-height: math.div(21, 14);
+			color: $color-black;
+			font-weight: $fw-400;
 		}
 	}
 
 	&__text {
 		@media (max-width: em($breakpoint480)) {
-			font-size: 14px;
-			line-height: 21px;
-			color: #2D2D2D;
+			font-size: $fz-14;
+			line-height: math.div(21, 14);
+			color: $color-black;
 		}
 	}
 }

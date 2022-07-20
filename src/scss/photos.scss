@@ -44,10 +44,10 @@
 				flex-direction: column;
 			}
 			.gallery-image__photo-text {
-				font-weight: 600;
-				font-size: 14px;
+				font-weight: $fw-600;
+				font-size: $fz-14;
 				line-height: 21px;
-				color: #2D2D2D;
+				color: $color-black;
 			}
 			.gallery-image__photo {
 				position: static;

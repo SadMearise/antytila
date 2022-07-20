@@ -1,47 +1,53 @@
 @font-face {
   font-family: AlbertusNova;
   font-display: swap;
-  src: url("../fonts/AlbertusNova-Bold.woff2") format("woff2"), url("../fonts/AlbertusNova-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/AlbertusNova-Bold.woff2") format("woff2"),
+    url("../fonts/AlbertusNova-Bold.woff") format("woff");
+  font-weight: $fw-700;
   font-style: normal;
 }
 
 @font-face {
   font-family: AlbertusNovaLight;
   font-display: swap;
-  src: url("../fonts/AlbertusNovaLight.woff2") format("woff2"), url("../fonts/AlbertusNovaLight.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/AlbertusNovaLight.woff2") format("woff2"),
+    url("../fonts/AlbertusNovaLight.woff") format("woff");
+  font-weight: $fw-400;
   font-style: normal;
 }
 
 @font-face {
   font-family: AlbertusNovaBlack;
   font-display: swap;
-  src: url("../fonts/AlbertusNovaBlack.woff2") format("woff2"), url("../fonts/AlbertusNovaBlack.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/AlbertusNovaBlack.woff2") format("woff2"),
+    url("../fonts/AlbertusNovaBlack.woff") format("woff");
+  font-weight: $fw-400;
   font-style: normal;
 }
 
 @font-face {
   font-family: AlbertusNovaThin;
   font-display: swap;
-  src: url("../fonts/AlbertusNovaThin.woff2") format("woff2"), url("../fonts/AlbertusNovaThin.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/AlbertusNovaThin.woff2") format("woff2"),
+    url("../fonts/AlbertusNovaThin.woff") format("woff");
+  font-weight: $fw-400;
   font-style: normal;
 }
 
 @font-face {
   font-family: AlbertusNova;
   font-display: swap;
-  src: url("../fonts/AlbertusNova.woff2") format("woff2"), url("../fonts/AlbertusNova.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/AlbertusNova.woff2") format("woff2"),
+    url("../fonts/AlbertusNova.woff") format("woff");
+  font-weight: $fw-400;
   font-style: normal;
 }
 
 @font-face {
   font-family: CirceSlabC;
   font-display: swap;
-  src: url("../fonts/CirceSlabC-Medium.woff2") format("woff2"), url("../fonts/CirceSlabC-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/CirceSlabC-Medium.woff2") format("woff2"),
+    url("../fonts/CirceSlabC-Medium.woff") format("woff");
+  font-weight: $fw-500;
   font-style: normal;
 }

@@ -34,6 +34,17 @@ $fw-600: 600;
 $fw-700: 700;
 
 // font-size
+$fz-12: 12px;
+$fz-14: 14px;
+$fz-16: 16px;
+$fz-18: 18px;
+$fz-20: 20px;
+$fz-22: 22px;
+$fz-24: 24px;
+$fz-26: 26px;
+$fz-30: 30px;
+$fz-32: 32px;
+$fz-40: 40px;
 
 // line-height
 
@@ -53,7 +64,7 @@ $color-gray-200: #989898;
 
 // Оболочка
 body {
-	background-color: #FAFAFA;
+	background-color: $color-gray-50;
 	color: $color-black;
 	font-weight: $fw-400;
 	&._lock {
@@ -185,14 +196,6 @@ body {
 		}
 	}
 }
-
-// классы для вставки 
-// vertical-indent vertical-indent--xs
-// vertical-indent vertical-indent--s
-// vertical-indent vertical-indent--m
-// vertical-indent vertical-indent--l
-// vertical-indent vertical-indent--xl
-
 // Подключение файлов/стилей/страниц и элементов
 
 @import "base/ui";
@@ -207,23 +210,3 @@ body {
 @import "photos";
 @import "music-album";
 @import "news";
-
-// Основные элементы
-// Пример: 
-
-// <-- HTML -->
-// <main class="page page__home">
-// 	<section class="page__main-block"></section>
-// </main>
-// <-- / HTML -->
-
-// <-- CSS -->
-// .page {
-
-// 	&__home {
-// 	}
-
-// 	&__main-block {
-// 	}
-// }
-// <-- / CSS -->

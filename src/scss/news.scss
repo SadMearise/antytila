@@ -62,7 +62,7 @@
 			margin-left: 21px;
 		}
 		&.active {
-			color: #989898;
+			color: $color-gray-200;
 		}
 	}
 
@@ -111,7 +111,7 @@
 
 	&__socials {
 		padding-top: 16px;
-		border-top: 1px solid #E0E0E0;
+		border-top: 1px solid $color-gray-100;
 		justify-content: center;
 		column-gap: 18px;
 		svg {

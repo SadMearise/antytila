@@ -48,7 +48,7 @@
 	&__item {
 		cursor: pointer;
 	}
-	._nav-active {
-		color: #2D2D2D;
+	.nav-active {
+		color: $color-black;
 	}
 }
