@@ -6,13 +6,13 @@
 	&__items {
 		display: grid;
 		margin: -12px;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr 1fr 1fr;;
 		.grid--big {
 			grid-column: 1 / 3;
 			grid-row: 1 / 3;
 		}
 		@media (max-width: em($breakpoint768)) {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: 1fr 1fr;;
 		}
 		@media (max-width: em($breakpoint480)) {
 			margin: -8px;
