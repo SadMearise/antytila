@@ -546,6 +546,7 @@
 	&__image {
 		display: flex;
 		flex: 1 0 auto;
+		align-items: center;
 		img {
 			max-height: 260px;
 			width: 100%;
