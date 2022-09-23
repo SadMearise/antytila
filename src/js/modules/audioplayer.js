@@ -1,13 +1,11 @@
-const audio = document.URL.includes("music-album-");
+const page = document.URL.includes("music-album-");
 
-if (audio) {
+if (page) {
 	const audio = document.querySelector(".audio-block__audio");
 	const title = document.querySelector(".audio-block__track-name");
 	const audioItems = document.querySelectorAll(".music-album__audio-item");
-	const trackDuration = document.querySelector(".audio-progress__max-time");
-	const tracksDurationDOM = document.querySelectorAll(
-		".audio-item__track-duration"
-	);
+	const basicMaxTrackDuration = document.querySelector(".audio-progress__max-time");
+
 	const playBtns = document.querySelectorAll(".svg-play-dims");
 	const nextBtn = document.querySelector(".svg-skip-next-dims");
 	const prevBtn = document.querySelector(".svg-skip-previous-dims");
@@ -17,22 +15,17 @@ if (audio) {
 	const progressBar = document.querySelector(".progress-bar__red-line");
 
 	const dataSrc = document.querySelectorAll("[data-src]");
-	let trackSrcs = [];
 	let trackNames = [];
-	let trackDurationArray = [];
 	let prevIndex = 0;
 	let trackIndex = 1;
+	let trackSrcs = [];
 
 	dataSrc.forEach(function (item) {
 		trackSrcs.push(item.dataset.src);
 	});
-
+	
 	dataSrc.forEach((item) => {
 		trackNames.push(item.innerHTML);
-	});
-
-	tracksDurationDOM.forEach((item) => {
-		trackDurationArray.push(item.innerHTML);
 	});
 
 	window.addEventListener("load", () => {
@@ -181,7 +174,7 @@ if (audio) {
 			if (totalSec < 10) {
 				totalSec = `0${totalSec}`;
 			}
-			trackDuration.innerText = `${totalMin}:${totalSec}`;
+			basicMaxTrackDuration.innerText = `${totalMin}:${totalSec}`;
 		});
 
 		let currentMin;
