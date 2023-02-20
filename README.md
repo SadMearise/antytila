@@ -1,2 +1,2 @@
 # Antytila
-[Preview](https://sadmearise.github.io/Antytila/dist/)
+[Preview](https://sadmearise.github.io/antytila/dist/)
